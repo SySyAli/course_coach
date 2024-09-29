@@ -1,11 +1,12 @@
 'use client'
 
 import React, { useState, useEffect } from 'react'
-import { Box, VStack, Heading, Text, Container, Spinner } from '@chakra-ui/react'
+import { Box, VStack, Heading, Text, Container, Spinner, Tabs, TabList, TabPanels, Tab, TabPanel } from '@chakra-ui/react'
 import MajorSelector from './components/MajorSelector'
 import CourseList from './components/CourseList'
+import CourseFlowchart from './components/CourseFlowchart'
 
-export default function Home() {
+const Home: React.FC = () => {
   const [major, setMajor] = useState<string | null>(null)
   const [courses, setCourses] = useState([])
   const [loading, setLoading] = useState(false)
@@ -13,7 +14,7 @@ export default function Home() {
   useEffect(() => {
     if (major) {
       setLoading(true)
-      fetch(`/courses?major=${major}`)
+      fetch(`/bio_data?major=${major}`)
         .then((res) => res.json())
         .then((data) => {
           setCourses(data)
@@ -44,12 +45,27 @@ export default function Home() {
           <Box textAlign="center">
             <Spinner size="xl" color="purple.500" />
           </Box>
-        ) : major ? (
-          <CourseList courses={courses} />
+        ) : major && courses.length > 0 ? (
+          <Tabs isFitted variant="enclosed">
+            <TabList mb="1em">
+              <Tab>Course List</Tab>
+              <Tab>Course Flowchart</Tab>
+            </TabList>
+            <TabPanels>
+              <TabPanel>
+                <CourseList courses={courses} />
+              </TabPanel>
+              <TabPanel>
+                <Box height="700px" width="100%">
+                  <CourseFlowchart courses={courses} />
+                </Box>
+              </TabPanel>
+            </TabPanels>
+          </Tabs>
         ) : (
           <Box textAlign="center">
             <Text fontSize="lg" color="gray.600">
-              Please select a major to view courses
+              {major ? "No courses found for this major." : "Please select a major to view courses"}
             </Text>
           </Box>
         )}
@@ -57,3 +73,5 @@ export default function Home() {
     </Container>
   )
 }
+
+export default Home

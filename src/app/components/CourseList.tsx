@@ -1,12 +1,12 @@
 'use client'
 
 import React from 'react'
-import { Box, VStack, Text, Heading, Badge } from '@chakra-ui/react'
+import { Box, VStack, Text, Heading, Badge, HStack } from '@chakra-ui/react'
 
 interface Course {
-  id: string
-  name: string
-  description: string
+  __catalogCourseId: string;
+  prerequisites: string[];
+  corequisites: string[];
 }
 
 interface CourseListProps {
@@ -18,7 +18,7 @@ const CourseList: React.FC<CourseListProps> = ({ courses }) => {
     <VStack spacing={4} align="stretch" width="100%" maxWidth="800px" margin="auto">
       {courses.map((course) => (
         <Box
-          key={course.id}
+          key={course.__catalogCourseId}
           p={5}
           shadow="md"
           borderWidth="1px"
@@ -26,9 +26,28 @@ const CourseList: React.FC<CourseListProps> = ({ courses }) => {
           bg="white"
         >
           <Heading fontSize="xl" mb={2}>
-            {course.name} <Badge colorScheme="purple">{course.id}</Badge>
+            {course.__catalogCourseId}
           </Heading>
-          <Text fontSize="md">{course.description}</Text>
+          <HStack spacing={2} mb={2}>
+            <Text fontWeight="bold">Prerequisites:</Text>
+            {course.prerequisites.length > 0 ? (
+              course.prerequisites.map((prereq) => (
+                <Badge key={prereq} colorScheme="purple">{prereq}</Badge>
+              ))
+            ) : (
+              <Text>None</Text>
+            )}
+          </HStack>
+          <HStack spacing={2}>
+            <Text fontWeight="bold">Corequisites:</Text>
+            {course.corequisites.length > 0 ? (
+              course.corequisites.map((coreq) => (
+                <Badge key={coreq} colorScheme="blue">{coreq}</Badge>
+              ))
+            ) : (
+              <Text>None</Text>
+            )}
+          </HStack>
         </Box>
       ))}
     </VStack>
