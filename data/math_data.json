@@ -1,0 +1,613 @@
+[
+    {
+        "__catalogCourseId": "MATH1005",
+        "__passedCatalogQuery": true,
+        "dateStart": "2020-01-01",
+        "pid": "HkgpFUT33O",
+        "id": "60df46859e00f6d7b7a995d5",
+        "title": "Pre-calculus Mathematics",
+        "subjectCode": {
+            "name": "MATH",
+            "prerequisites": [],
+            "corequisites": [],
+            "description": "Mathematics",
+            "id": "60466db116818000264f8348",
+            "linkedGroup": "5f62c427a712c5002a25526f"
+        },
+        "catalogActivationDate": "1970-01-01",
+        "_score": 1
+    },
+    {
+        "__catalogCourseId": "MATH1100",
+        "__passedCatalogQuery": true,
+        "dateStart": "2020-01-01",
+        "pid": "BJx0F8T2hu",
+        "id": "60df46857a4eacb980bb2780",
+        "title": "Survey of Calculus",
+        "subjectCode": {
+            "name": "MATH",
+            "prerequisites": [],
+            "corequisites": [],
+            "description": "Mathematics",
+            "id": "60466db116818000264f8348",
+            "linkedGroup": "5f62c427a712c5002a25526f"
+        },
+        "catalogActivationDate": "1970-01-01",
+        "_score": 1
+    },
+    {
+        "__catalogCourseId": "MATH1200",
+        "__passedCatalogQuery": true,
+        "dateStart": "2020-01-01",
+        "pid": "B1-0t8Th2O",
+        "id": "60df4685f56be6d5a99f7bbd",
+        "title": "Single-Variable Calculus I",
+        "subjectCode": {
+            "name": "MATH",
+            "prerequisites": [],
+            "corequisites": [],
+            "description": "Mathematics",
+            "id": "60466db116818000264f8348",
+            "linkedGroup": "5f62c427a712c5002a25526f"
+        },
+        "catalogActivationDate": "1970-01-01",
+        "_score": 1
+    },
+    {
+        "__catalogCourseId": "MATH1300",
+        "__passedCatalogQuery": true,
+        "dateStart": "2020-01-01",
+        "pid": "Hyf5Ia2nu",
+        "id": "60df4689f56be648d79f7bc7",
+        "title": "Accelerated Single-Variable Calculus I",
+        "subjectCode": {
+            "name": "MATH",
+            "prerequisites": [],
+            "corequisites": [],
+            "description": "Mathematics",
+            "id": "60466db116818000264f8348",
+            "linkedGroup": "5f62c427a712c5002a25526f"
+        },
+        "catalogActivationDate": "1970-01-01",
+        "_score": 1
+    },
+    {
+        "__catalogCourseId": "MATH1301",
+        "__passedCatalogQuery": true,
+        "dateStart": "2020-01-01",
+        "pid": "r1AYUan2d",
+        "id": "60df4685efb165e20df8257c",
+        "title": "Accelerated Single-Variable Calculus II",
+        "subjectCode": {
+            "name": "MATH",
+            "prerequisites": [["MATH1201"], ["MATH1300"]],
+            "corequisites": [],
+            "description": "Mathematics",
+            "id": "60466db116818000264f8348",
+            "linkedGroup": "5f62c427a712c5002a25526f"
+        },
+        "catalogActivationDate": "1970-01-01",
+        "_score": 1
+    },
+    {
+        "__catalogCourseId": "MATH2300",
+        "__passedCatalogQuery": true,
+        "dateStart": "2020-01-01",
+        "pid": "rJzCKLTn3_",
+        "id": "60df46859e00f6d443a995d8",
+        "title": "Multivariable Calculus",
+        "subjectCode": {
+            "name": "MATH",
+            "prerequisites": [["MATH1301"], ["MATH2200"]],
+            "corequisites": [],
+            "description": "Mathematics",
+            "id": "60466db116818000264f8348",
+            "linkedGroup": "5f62c427a712c5002a25526f"
+        },
+        "catalogActivationDate": "1970-01-01",
+        "_score": 1
+    },
+    {
+        "__catalogCourseId": "MATH2400",
+        "__passedCatalogQuery": true,
+        "dateStart": "2020-01-01",
+        "pid": "SkpF8a3nO",
+        "id": "60df4685f56be6e7859f7bba",
+        "title": "Differential Equations with Linear Algebra",
+        "subjectCode": {
+            "name": "MATH",
+            "prerequisites": ["MATH2300"],
+            "corequisites": [],
+            "description": "Mathematics",
+            "id": "60466db116818000264f8348",
+            "linkedGroup": "5f62c427a712c5002a25526f"
+        },
+        "catalogActivationDate": "1970-01-01",
+        "_score": 1
+    },
+    {
+        "__catalogCourseId": "MATH2410",
+        "__passedCatalogQuery": true,
+        "dateStart": "2020-01-01",
+        "pid": "Hkm98Tnnd",
+        "id": "60df468bdac2158283966790",
+        "title": "Methods of Linear Algebra",
+        "subjectCode": {
+            "name": "MATH",
+            "prerequisites": ["MATH2300"],
+            "corequisites": [],
+            "description": "Mathematics",
+            "id": "60466db116818000264f8348",
+            "linkedGroup": "5f62c427a712c5002a25526f"
+        },
+        "catalogActivationDate": "1970-01-01",
+        "_score": 1
+    },
+    {
+        "__catalogCourseId": "MATH2420",
+        "__passedCatalogQuery": true,
+        "dateStart": "2020-01-01",
+        "pid": "r1x0tUp33_",
+        "id": "60df4685fb83f86bd24214f4",
+        "title": "Methods of Ordinary Differential Equations",
+        "subjectCode": {
+            "name": "MATH",
+            "prerequisites": [["MATH2300"], ["MATH2501"]],
+            "corequisites": [],
+            "description": "Mathematics",
+            "id": "60466db116818000264f8348",
+            "linkedGroup": "5f62c427a712c5002a25526f"
+        },
+        "catalogActivationDate": "1970-01-01",
+        "_score": 1
+    },
+    {
+        "__catalogCourseId": "MATH2500",
+        "__passedCatalogQuery": true,
+        "dateStart": "2020-01-01",
+        "pid": "B1ZZ5L62hO",
+        "id": "60df4689dac215023596678e",
+        "title": "Multivariable Calculus and Linear Algebra",
+        "subjectCode": {
+            "name": "MATH",
+            "prerequisites": [],
+            "corequisites": [],
+            "description": "Mathematics",
+            "id": "60466db116818000264f8348",
+            "linkedGroup": "5f62c427a712c5002a25526f"
+        },
+        "catalogActivationDate": "1970-01-01",
+        "_score": 1
+    },
+    {
+        "__catalogCourseId": "MATH2501",
+        "__passedCatalogQuery": true,
+        "dateStart": "2020-01-01",
+        "pid": "HkCYLp2hd",
+        "id": "60df46857a4eac4c6cbb277f",
+        "title": "Multivariable Calculus and Linear Algebra",
+        "subjectCode": {
+            "name": "MATH",
+            "prerequisites": ["MATH2500"],
+            "corequisites": [],
+            "description": "Mathematics",
+            "id": "60466db116818000264f8348",
+            "linkedGroup": "5f62c427a712c5002a25526f"
+        },
+        "catalogActivationDate": "1970-01-01",
+        "_score": 1
+    },
+    {
+        "__catalogCourseId": "MATH2600",
+        "__passedCatalogQuery": true,
+        "dateStart": "2020-01-01",
+        "pid": "Sy6tIT2n_",
+        "id": "60df4685fb83f81b364214f2",
+        "title": "Linear Algebra",
+        "subjectCode": {
+            "name": "MATH",
+            "prerequisites": ["MATH2300"],
+            "corequisites": [],
+            "description": "Mathematics",
+            "id": "60466db116818000264f8348",
+            "linkedGroup": "5f62c427a712c5002a25526f"
+        },
+        "catalogActivationDate": "1970-01-01",
+        "_score": 1
+    },
+    {
+        "__catalogCourseId": "MATH2610",
+        "__passedCatalogQuery": true,
+        "dateStart": "2020-01-01",
+        "pid": "SkZ58ahn_",
+        "id": "60df4689dac215782a96678d",
+        "title": "Ordinary Differential Equations",
+        "subjectCode": {
+            "name": "MATH",
+            "prerequisites": [["MATH2501"], ["MATH2300", ["MATH2410", "MATH2600"]]],
+            "corequisites": [],
+            "description": "Mathematics",
+            "id": "60466db116818000264f8348",
+            "linkedGroup": "5f62c427a712c5002a25526f"
+        },
+        "catalogActivationDate": "1970-01-01",
+        "_score": 1
+    },
+    {
+        "__catalogCourseId": "MATH2810",
+        "__passedCatalogQuery": true,
+        "dateStart": "2021-01-01",
+        "pid": "S1xv9Kp32d",
+        "id": "60df498e9c3c982144a7e877",
+        "title": "Probability and Statistics for Engineering",
+        "subjectCode": {
+            "name": "MATH",
+            "prerequisites": [["MATH2501"], ["MATH2300"]],
+            "corequisites": [],
+            "description": "Mathematics",
+            "id": "60466db116818000264f8348",
+            "linkedGroup": "5f62c427a712c5002a25526f"
+        },
+        "catalogActivationDate": "1970-01-01",
+        "_score": 1
+    },
+    {
+        "__catalogCourseId": "MATH2820",
+        "__passedCatalogQuery": true,
+        "dateStart": "2020-01-01",
+        "pid": "HygAF8ph2O",
+        "id": "60df4685f56be66b959f7bbc",
+        "title": "Introduction to Probability and Mathematical Statistics",
+        "subjectCode": {
+            "name": "MATH",
+            "prerequisites": [["MATH2501"], ["MATH2300"]],
+            "corequisites": ["MATH2820L"],
+            "description": "Mathematics",
+            "id": "60466db116818000264f8348",
+            "linkedGroup": "5f62c427a712c5002a25526f"
+        },
+        "catalogActivationDate": "1970-01-01",
+        "_score": 1
+    },
+    {
+        "__catalogCourseId": "MATH2820L",
+        "__passedCatalogQuery": true,
+        "dateStart": "2020-01-01",
+        "pid": "SJ-RF8T32O",
+        "id": "60df46857a4eac17cbbb2781",
+        "title": "Statistics Laboratory",
+        "subjectCode": {
+            "name": "MATH",
+            "prerequisites": [],
+            "corequisites": ["MATH2820"],
+            "description": "Mathematics",
+            "id": "60466db116818000264f8348",
+            "linkedGroup": "5f62c427a712c5002a25526f"
+        },
+        "catalogActivationDate": "1970-01-01",
+        "_score": 1
+    },
+    {
+        "__catalogCourseId": "MATH3010",
+        "__passedCatalogQuery": true,
+        "dateStart": "2020-01-01",
+        "pid": "ryGCF8phnd",
+        "id": "60df4685f56be6f75d9f7bbe",
+        "title": "Intensive Problem Solving and Exposition",
+        "subjectCode": {
+            "name": "MATH",
+            "prerequisites": [["MATH2410"],["MATH2600"],["MATH2501"]],
+            "corequisites": [],
+            "description": "Mathematics",
+            "id": "60466db116818000264f8348",
+            "linkedGroup": "5f62c427a712c5002a25526f"
+        },
+        "catalogActivationDate": "1970-01-01",
+        "_score": 1
+    },
+    {
+        "__catalogCourseId": "MATH3100",
+        "__passedCatalogQuery": true,
+        "dateStart": "2020-01-01",
+        "pid": "Hy7RKL622_",
+        "id": "60df4685accb934962bebf94",
+        "title": "Introduction to Analysis",
+        "subjectCode": {
+            "name": "MATH",
+            "prerequisites": [["MATH2501"], ["MATH2300", ["MATH2410", "MATH2600"]]],
+            "corequisites": [],
+            "description": "Mathematics",
+            "id": "60466db116818000264f8348",
+            "linkedGroup": "5f62c427a712c5002a25526f"
+        },
+        "catalogActivationDate": "1970-01-01",
+        "_score": 1
+    },
+    {
+        "__catalogCourseId": "MATH3200",
+        "__passedCatalogQuery": true,
+        "dateStart": "2020-01-01",
+        "pid": "BkWRFI6hhO",
+        "id": "60df4685fb83f880214214f5",
+        "title": "Introduction to Topology",
+        "subjectCode": {
+            "name": "MATH",
+            "prerequisites": [["MATH2410"],["MATH2600"],["MATH2501"]],
+            "corequisites": [],
+            "description": "Mathematics",
+            "id": "60466db116818000264f8348",
+            "linkedGroup": "5f62c427a712c5002a25526f"
+        },
+        "catalogActivationDate": "1970-01-01",
+        "_score": 1
+    },
+    {
+        "__catalogCourseId": "MATH3300",
+        "__passedCatalogQuery": true,
+        "dateStart": "2020-01-01",
+        "pid": "H1ZAKIahnu",
+        "id": "60df46859e00f68408a995d9",
+        "title": "Abstract Algebra",
+        "subjectCode": {
+            "name": "MATH",
+            "prerequisites": [["MATH2410"],["MATH2600"],["MATH2501"]],
+            "corequisites": [],
+            "description": "Mathematics",
+            "id": "60466db116818000264f8348",
+            "linkedGroup": "5f62c427a712c5002a25526f"
+        },
+        "catalogActivationDate": "1970-01-01",
+        "_score": 1
+    },
+    {
+        "__catalogCourseId": "MATH3320",
+        "__passedCatalogQuery": true,
+        "dateStart": "2020-01-01",
+        "pid": "HJCY8Th2u",
+        "id": "60df4685accb93115bbebf90",
+        "title": "Error-Correcting Codes and Cryptography",
+        "subjectCode": {
+            "name": "MATH",
+            "prerequisites": [["MATH2410"],["MATH2600"],["MATH2501"]],
+            "corequisites": [],
+            "description": "Mathematics",
+            "id": "60466db116818000264f8348",
+            "linkedGroup": "5f62c427a712c5002a25526f"
+        },
+        "catalogActivationDate": "1970-01-01",
+        "_score": 1
+    },
+    {
+        "__catalogCourseId": "MATH3620",
+        "__passedCatalogQuery": true,
+        "dateStart": "2020-01-01",
+        "pid": "ByxN9Lp22O",
+        "id": "60df468cfb83f84d6e421502",
+        "title": "Introduction to Numerical Mathematics",
+        "subjectCode": {
+            "name": "MATH",
+            "prerequisites": [[["MATH2410"],["MATH2600"],["MATH2501"]],[["MATH2400"],["MATH2420"],["MATH2610"]]],
+            "corequisites": [],
+            "description": "Mathematics",
+            "id": "60466db116818000264f8348",
+            "linkedGroup": "5f62c427a712c5002a25526f"
+        },
+        "catalogActivationDate": "1970-01-01",
+        "_score": 1
+    },
+    {
+        "__catalogCourseId": "MATH3640",
+        "__passedCatalogQuery": true,
+        "dateStart": "2021-01-01",
+        "pid": "Byv5FTnn_",
+        "id": "60df498e34b0a888661ed02d",
+        "title": "Probability",
+        "subjectCode": {
+            "name": "MATH",
+            "prerequisites": [],
+            "corequisites": [],
+            "description": "Mathematics",
+            "id": "60466db116818000264f8348",
+            "linkedGroup": "5f62c427a712c5002a25526f"
+        },
+        "catalogActivationDate": "1970-01-01",
+        "_score": 1
+    },
+    {
+        "__catalogCourseId": "MATH3650",
+        "__passedCatalogQuery": true,
+        "dateStart": "2020-01-01",
+        "pid": "SJrcLa33_",
+        "id": "60df468cdac2154baf966794",
+        "title": "Introduction to Financial Mathematics",
+        "subjectCode": {
+            "name": "MATH",
+            "prerequisites": [["MATH2300"], ["MATH2501"]],
+            "corequisites": [],
+            "description": "Mathematics",
+            "id": "60466db116818000264f8348",
+            "linkedGroup": "5f62c427a712c5002a25526f"
+        },
+        "catalogActivationDate": "1970-01-01",
+        "_score": 1
+    },
+    {
+        "__catalogCourseId": "MATH3670",
+        "__passedCatalogQuery": true,
+        "dateStart": "2021-01-01",
+        "pid": "SJWw9t6hhd",
+        "id": "60df498e6fda0552a8c8ace5",
+        "title": "Mathematical Data Science",
+        "subjectCode": {
+            "name": "MATH",
+            "prerequisites": [[["MATH2810"],["MATH2820"]],[["MATH2410"],["MATH2600"],["MATH2501"]]],
+            "corequisites": [],
+            "description": "Mathematics",
+            "id": "60466db116818000264f8348",
+            "linkedGroup": "5f62c427a712c5002a25526f"
+        },
+        "catalogActivationDate": "1970-01-01",
+        "_score": 1
+    },
+    {
+        "__catalogCourseId": "MATH3700",
+        "__passedCatalogQuery": true,
+        "dateStart": "2020-01-01",
+        "pid": "rkl4q8a32_",
+        "id": "60df468cf56be62ae69f7bce",
+        "title": "Discrete Mathematics",
+        "subjectCode": {
+            "name": "MATH",
+            "prerequisites": [["MATH2410"],["MATH2600"],["MATH2501"]],
+            "corequisites": [],
+            "description": "Mathematics",
+            "id": "60466db116818000264f8348",
+            "linkedGroup": "5f62c427a712c5002a25526f"
+        },
+        "catalogActivationDate": "1970-01-01",
+        "_score": 1
+    },
+    {
+        "__catalogCourseId": "MATH3800",
+        "__passedCatalogQuery": true,
+        "dateStart": "2020-01-01",
+        "pid": "rJN58pnnd",
+        "id": "60df468cf56be6d90e9f7bcd",
+        "title": "Theory of Numbers",
+        "subjectCode": {
+            "name": "MATH",
+            "prerequisites": [["MATH2410"],["MATH2600"],["MATH2501"]],
+            "corequisites": [],
+            "description": "Mathematics",
+            "id": "60466db116818000264f8348",
+            "linkedGroup": "5f62c427a712c5002a25526f"
+        },
+        "catalogActivationDate": "1970-01-01",
+        "_score": 1
+    },
+    {
+        "__catalogCourseId": "MATH3859",
+        "__passedCatalogQuery": true,
+        "dateStart": "2020-01-01",
+        "pid": "HJ7V58Th3u",
+        "id": "60df468cfb83f8814b421505",
+        "title": "Independent Study",
+        "subjectCode": {
+            "name": "MATH",
+            "prerequisites": [],
+            "corequisites": [],
+            "description": "Mathematics",
+            "id": "60466db116818000264f8348",
+            "linkedGroup": "5f62c427a712c5002a25526f"
+        },
+        "catalogActivationDate": "1970-01-01",
+        "_score": 1
+    },
+    {
+        "__catalogCourseId": "MATH4200",
+        "__passedCatalogQuery": true,
+        "dateStart": "2020-01-01",
+        "pid": "ByB9L6n2_",
+        "id": "60df468eefb165c68af8258a",
+        "title": "Topology",
+        "subjectCode": {
+            "name": "MATH",
+            "prerequisites": [["MATH2501"], ["MATH3200"]],
+            "corequisites": [],
+            "description": "Mathematics",
+            "id": "60466db116818000264f8348",
+            "linkedGroup": "5f62c427a712c5002a25526f"
+        },
+        "catalogActivationDate": "1970-01-01",
+        "_score": 1
+    },
+    {
+        "__catalogCourseId": "MATH4300",
+        "__passedCatalogQuery": true,
+        "dateStart": "2020-01-01",
+        "pid": "B1lN5La33u",
+        "id": "60df468caccb932e0bbebfa4",
+        "title": "Modern Algebra",
+        "subjectCode": {
+            "name": "MATH",
+            "prerequisites": ["MATH3300"],
+            "corequisites": [],
+            "description": "Mathematics",
+            "id": "60466db116818000264f8348",
+            "linkedGroup": "5f62c427a712c5002a25526f"
+        },
+        "catalogActivationDate": "1970-01-01",
+        "_score": 1
+    },
+    {
+        "__catalogCourseId": "MATH4610",
+        "__passedCatalogQuery": true,
+        "dateStart": "2020-01-01",
+        "pid": "SknqIpnnd",
+        "id": "60df46949e00f605c8a995f5",
+        "title": "Methods of Mathematical Physics",
+        "subjectCode": {
+            "name": "MATH",
+            "prerequisites": [[["MATH2410"],["MATH2600"],["MATH2501"]],[["MATH2400"],["MATH2420"],["MATH2610"]]],
+            "corequisites": [],
+            "description": "Mathematics",
+            "id": "60466db116818000264f8348",
+            "linkedGroup": "5f62c427a712c5002a25526f"
+        },
+        "catalogActivationDate": "1970-01-01",
+        "_score": 1
+    },
+    {
+        "__catalogCourseId": "MATH4620",
+        "__passedCatalogQuery": true,
+        "dateStart": "2021-01-01",
+        "pid": "rJgYcK622_",
+        "id": "60df49917890347e01fc376c",
+        "title": "Linear Optimization",
+        "subjectCode": {
+            "name": "MATH",
+            "prerequisites": [["MATH2410"],["MATH2600"],["MATH2501"]],
+            "corequisites": [],
+            "description": "Mathematics",
+            "id": "60466db116818000264f8348",
+            "linkedGroup": "5f62c427a712c5002a25526f"
+        },
+        "catalogActivationDate": "1970-01-01",
+        "_score": 1
+    },
+    {
+        "__catalogCourseId": "MATH4710",
+        "__passedCatalogQuery": true,
+        "dateStart": "2020-01-01",
+        "pid": "ryzN98an2_",
+        "id": "60df468cfb83f85a17421504",
+        "title": "Graph Theory",
+        "subjectCode": {
+            "name": "MATH",
+            "prerequisites": [["MATH2410"], ["MATH2600"]],
+            "corequisites": [],
+            "description": "Mathematics",
+            "id": "60466db116818000264f8348",
+            "linkedGroup": "5f62c427a712c5002a25526f"
+        },
+        "catalogActivationDate": "1970-01-01",
+        "_score": 1
+    },
+    {
+        "__catalogCourseId": "MATH4999",
+        "__passedCatalogQuery": true,
+        "dateStart": "2020-01-01",
+        "pid": "HkeBcLp23O",
+        "id": "60df468c3200537b948b1887",
+        "title": "Senior Thesis",
+        "subjectCode": {
+            "name": "MATH",
+            "prerequisites": [],
+            "corequisites": [],
+            "description": "Mathematics",
+            "id": "60466db116818000264f8348",
+            "linkedGroup": "5f62c427a712c5002a25526f"
+        },
+        "catalogActivationDate": "1970-01-01",
+        "_score": 1
+    }]
