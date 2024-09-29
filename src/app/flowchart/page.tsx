@@ -49,7 +49,7 @@ const FlowchartPage: React.FC = () => {
 
   useEffect(() => {
     // Fetch the course data from an API
-    fetch('/api/bio_data')  // Replace with the actual API endpoint
+    fetch('/bio_data?major=BSCI')  // Replace with the actual API endpoint
       .then(response => response.json())
       .then(jsonData => {
         if (jsonData.courses && Array.isArray(jsonData.courses)) {

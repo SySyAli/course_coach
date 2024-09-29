@@ -1,0 +1,497 @@
+[{
+    "__catalogCourseId": "CS1000",
+    "__passedCatalogQuery": true,
+    "dateStart": "2021-01-01",
+    "pid": "B1MhsF63nd",
+    "id": "60df49a49c3c98f37da7e8cc",
+    "title": "The Beauty and Joy of Computing",
+    "subjectCode": {
+        "name": "CS",
+        "prerequisites": [],
+        "description": "Computer Science",
+        "id": "60466db602af500027645ad5",
+        "linkedGroup": "5f62c44095d3fa002a531857"
+    },
+    "catalogActivationDate": "1970-01-01",
+    "_score": 1
+},
+{
+    "__catalogCourseId": "CS1100",
+    "__passedCatalogQuery": true,
+    "dateStart": "2021-01-01",
+    "pid": "rJG3otahn_",
+    "id": "60df49a434803c04a02c6b9c",
+    "title": "Applied Programming and Problem Solving with Python",
+    "subjectCode": {
+        "name": "CS",
+        "prerequisites": [],
+        "description": "Computer Science",
+        "id": "60466db602af500027645ad5",
+        "linkedGroup": "5f62c44095d3fa002a531857"
+    },
+    "catalogActivationDate": "1970-01-01",
+    "_score": 1
+},
+{
+    "__catalogCourseId": "CS1101",
+    "__passedCatalogQuery": true,
+    "dateStart": "2020-01-01",
+    "pid": "r1LHv6hnO",
+    "id": "60df473d9e00f694b1a99733",
+    "title": "Programming and Problem Solving",
+    "subjectCode": {
+        "name": "CS",
+        "prerequisites": [],
+        "description": "Computer Science",
+        "id": "60466db602af500027645ad5",
+        "linkedGroup": "5f62c44095d3fa002a531857"
+    },
+    "catalogActivationDate": "1970-01-01",
+    "_score": 1
+},
+{
+    "__catalogCourseId": "CS1103",
+    "__passedCatalogQuery": true,
+    "dateStart": "2021-01-01",
+    "pid": "BkHdVYahhO",
+    "id": "60df4930f56be6fd729f8032",
+    "title": "Introductory Programming for Engineers and Scientists",
+    "subjectCode": {
+        "name": "CS",
+        "prerequisites": [],
+        "description": "Computer Science",
+        "id": "60466db602af500027645ad5",
+        "linkedGroup": "5f62c44095d3fa002a531857"
+    },
+    "catalogActivationDate": "1970-01-01",
+    "_score": 1
+},
+{
+    "__catalogCourseId": "CS1151",
+    "__passedCatalogQuery": true,
+    "dateStart": "2020-01-01",
+    "pid": "SyNHSPT33O",
+    "id": "60df473daccb93f2b5bec108",
+    "title": "Computers and Ethics",
+    "subjectCode": {
+        "name": "CS",
+        "prerequisites": [],
+        "description": "Computer Science",
+        "id": "60466db602af500027645ad5",
+        "linkedGroup": "5f62c44095d3fa002a531857"
+    },
+    "catalogActivationDate": "1970-01-01",
+    "_score": 1
+},
+{
+    "__catalogCourseId": "CS2201",
+    "__passedCatalogQuery": true,
+    "dateStart": "2021-09-02",
+    "pid": "Hy3itpn2O",
+    "id": "610add8c565fc02ed4438536",
+    "title": "Program Design and Data Structures",
+    "subjectCode": {
+        "name": "CS",
+        "prerequisites": ["CS1101"],
+        "description": "Computer Science",
+        "id": "60466db602af500027645ad5",
+        "linkedGroup": "5f62c44095d3fa002a531857"
+    },
+    "catalogActivationDate": "1970-01-01",
+    "_score": 1
+},
+{
+    "__catalogCourseId": "CS2212",
+    "__passedCatalogQuery": true,
+    "dateStart": "2020-01-01",
+    "pid": "SkvSvT3h_",
+    "id": "60df473f9e00f63401a99735",
+    "title": "Discrete Structures",
+    "subjectCode": {
+        "name": "CS",
+        "prerequisites": ["CS1101"],
+        "description": "Computer Science",
+        "id": "60466db602af500027645ad5",
+        "linkedGroup": "5f62c44095d3fa002a531857"
+    },
+    "catalogActivationDate": "1970-01-01",
+    "_score": 1
+},
+{
+    "__catalogCourseId": "CS3250",
+    "__passedCatalogQuery": true,
+    "dateStart": "2020-01-01",
+    "pid": "r1LBSvTn3u",
+    "id": "60df473daccb93e5fabec10a",
+    "title": "Algorithms",
+    "subjectCode": {
+        "name": "CS",
+        "prerequisites": ["CS2201", "CS2212"],
+        "description": "Computer Science",
+        "id": "60466db602af500027645ad5",
+        "linkedGroup": "5f62c44095d3fa002a531857"
+    },
+    "catalogActivationDate": "1970-01-01",
+    "_score": 1
+},
+{
+    "__catalogCourseId": "CS3251",
+    "__passedCatalogQuery": true,
+    "dateStart": "2020-01-01",
+    "pid": "BJVHrw6hhO",
+    "id": "60df473df56be6be799f7cfe",
+    "title": "Intermediate Software Design",
+    "subjectCode": {
+        "name": "CS",
+        "prerequisites": ["CS2201"],
+        "description": "Computer Science",
+        "id": "60466db602af500027645ad5",
+        "linkedGroup": "5f62c44095d3fa002a531857"
+    },
+    "catalogActivationDate": "1970-01-01",
+    "_score": 1
+},
+{
+    "__catalogCourseId": "CS3252",
+    "__passedCatalogQuery": true,
+    "dateStart": "2020-01-01",
+    "pid": "SkgSrvahhu",
+    "id": "60df473d9e00f6bcaaa9972b",
+    "title": "Theory of Automata, Formal Languages, and Computation",
+    "subjectCode": {
+        "name": "CS",
+        "prerequisites": ["CS2212"],
+        "description": "Computer Science",
+        "id": "60466db602af500027645ad5",
+        "linkedGroup": "5f62c44095d3fa002a531857"
+    },
+    "catalogActivationDate": "1970-01-01",
+    "_score": 1
+},
+{
+    "__catalogCourseId": "CS3258",
+    "__passedCatalogQuery": true,
+    "dateStart": "2020-01-01",
+    "pid": "SJIBBPah2_",
+    "id": "60df473df56be62e639f7d00",
+    "title": "Introduction to Computer Graphics",
+    "subjectCode": {
+        "name": "CS",
+        "prerequisites": [],
+        "description": "Computer Science",
+        "id": "60466db602af500027645ad5",
+        "linkedGroup": "5f62c44095d3fa002a531857"
+    },
+    "catalogActivationDate": "1970-01-01",
+    "_score": 1
+},
+{
+    "__catalogCourseId": "CS3265",
+    "__passedCatalogQuery": true,
+    "dateStart": "2021-01-01",
+    "pid": "rk73oFannO",
+    "id": "60df49a46fda05918cc8ad37",
+    "title": "Database Management Systems",
+    "subjectCode": {
+        "name": "CS",
+        "prerequisites": ["CS2201"],
+        "description": "Computer Science",
+        "id": "60466db602af500027645ad5",
+        "linkedGroup": "5f62c44095d3fa002a531857"
+    },
+    "catalogActivationDate": "1970-01-01",
+    "_score": 1
+},
+{
+    "__catalogCourseId": "CS3270",
+    "__passedCatalogQuery": true,
+    "dateStart": "2021-01-01",
+    "pid": "rylR4Kp2nu",
+    "id": "60df49357a4eacef78bb2afa",
+    "title": "Programming Languages",
+    "subjectCode": {
+        "name": "CS",
+        "prerequisites": ["CS2201"],
+
+        "description": "Computer Science",
+        "id": "60466db602af500027645ad5",
+        "linkedGroup": "5f62c44095d3fa002a531857"
+    },
+    "catalogActivationDate": "1970-01-01",
+    "_score": 1
+},
+{
+    "__catalogCourseId": "CS3274",
+    "__passedCatalogQuery": true,
+    "dateStart": "2020-01-01",
+    "pid": "BkEBrP622d",
+    "id": "60df473defb1656691f8272a",
+    "title": "Modeling and Simulation",
+    "subjectCode": {
+        "name": "CS",
+        "prerequisites": ["CS2201"],
+        "description": "Computer Science",
+        "id": "60466db602af500027645ad5",
+        "linkedGroup": "5f62c44095d3fa002a531857"
+    },
+    "catalogActivationDate": "1970-01-01",
+    "_score": 1
+},
+{
+    "__catalogCourseId": "CS3276",
+    "__passedCatalogQuery": true,
+    "dateStart": "2020-01-01",
+    "pid": "Hy-rrwTh3O",
+    "id": "60df473daccb93d0b8bec105",
+    "title": "Compiler Construction",
+    "subjectCode": {
+        "name": "CS",
+        "prerequisites": ["CS3274"],
+        "description": "Computer Science",
+        "id": "60466db602af500027645ad5",
+        "linkedGroup": "5f62c44095d3fa002a531857"
+    },
+    "catalogActivationDate": "1970-01-01",
+    "_score": 1
+},
+{
+    "__catalogCourseId": "CS3281",
+    "__passedCatalogQuery": true,
+    "dateStart": "2020-01-01",
+    "pid": "BkdBvTh3u",
+    "id": "60df474032005316028b1a16",
+    "title": "Principles of Operating Systems I",
+    "subjectCode": {
+        "name": "CS",
+        "prerequisites": ["CS3251"],
+        "description": "Computer Science",
+        "id": "60466db602af500027645ad5",
+        "linkedGroup": "5f62c44095d3fa002a531857"
+    },
+    "catalogActivationDate": "1970-01-01",
+    "_score": 1
+},
+{
+    "__catalogCourseId": "CS3282",
+    "__passedCatalogQuery": true,
+    "dateStart": "2021-09-02",
+    "pid": "S1gvHDT3hu",
+    "id": "60df473f320053e56b8b1a14",
+    "title": "Principles of Operating Systems II",
+    "subjectCode": {
+        "name": "CS",
+        "prerequisites": ["CS3281"],
+        "description": "Computer Science",
+        "id": "60466db602af500027645ad5",
+        "linkedGroup": "5f62c44095d3fa002a531857"
+    },
+    "catalogActivationDate": "1970-01-01",
+    "_score": 1
+},
+{
+    "__catalogCourseId": "CS3860",
+    "__passedCatalogQuery": true,
+    "dateStart": "2020-01-01",
+    "pid": "HyGkkYp22d",
+    "id": "60df48d7f56be6f4f79f7f5e",
+    "title": "Undergraduate Research",
+    "subjectCode": {
+        "name": "CS",
+        "prerequisites": ["CS3251"],
+        "description": "Computer Science",
+        "id": "60466db602af500027645ad5",
+        "linkedGroup": "5f62c44095d3fa002a531857"
+    },
+    "catalogActivationDate": "1970-01-01",
+    "_score": 1
+},
+{
+    "__catalogCourseId": "CS3861",
+    "__passedCatalogQuery": true,
+    "dateStart": "2020-01-01",
+    "pid": "HJbmJYah3_",
+    "id": "60df48de7a4eacdde3bb2a53",
+    "title": "Undergraduate Research",
+    "subjectCode": {
+        "name": "CS",
+        "prerequisites": ["CS3251"],
+        "description": "Computer Science",
+        "id": "60466db602af500027645ad5",
+        "linkedGroup": "5f62c44095d3fa002a531857"
+    },
+    "catalogActivationDate": "1970-01-01",
+    "_score": 1
+},
+{
+    "__catalogCourseId": "CS3891",
+    "__passedCatalogQuery": true,
+    "dateStart": "2021-01-01",
+    "pid": "rkZ2jF6h3_",
+    "id": "60df49a4937b8b5a8a0c0fc3",
+    "title": "Special Topics",
+    "subjectCode": {
+        "name": "CS",
+        "prerequisites": ["CS3251"],
+        "description": "Computer Science",
+        "id": "60466db602af500027645ad5",
+        "linkedGroup": "5f62c44095d3fa002a531857"
+    },
+    "catalogActivationDate": "1970-01-01",
+    "_score": 1
+},
+{
+    "__catalogCourseId": "CS3892",
+    "__passedCatalogQuery": true,
+    "dateStart": "2021-01-01",
+    "pid": "rJG84Y63hO",
+    "id": "60df492e9c3c98c6b4a7e7fc",
+    "title": "Special Topics",
+    "subjectCode": {
+        "name": "CS",
+        "prerequisites": ["CS4260"],
+        "description": "Computer Science",
+        "id": "60466db602af500027645ad5",
+        "linkedGroup": "5f62c44095d3fa002a531857"
+    },
+    "catalogActivationDate": "1970-01-01",
+    "_score": 1
+},
+{
+    "__catalogCourseId": "CS4249",
+    "__passedCatalogQuery": true,
+    "dateStart": "2020-01-01",
+    "pid": "rkeJyta22d",
+    "id": "60df48d69e00f683b9a9998e",
+    "title": "Projects in Virtual Reality Design",
+    "subjectCode": {
+        "name": "CS",
+        "prerequisites": ["CS3251"],
+        "description": "Computer Science",
+        "id": "60466db602af500027645ad5",
+        "linkedGroup": "5f62c44095d3fa002a531857"
+    },
+    "catalogActivationDate": "1970-01-01",
+    "_score": 1
+},
+{
+    "__catalogCourseId": "CS4260",
+    "__passedCatalogQuery": true,
+    "dateStart": "2021-01-01",
+    "pid": "SyG2iYah3O",
+    "id": "60df49a4937b8bdf340c0fc4",
+    "title": "Artificial Intelligence",
+    "subjectCode": {
+        "name": "CS",
+        "prerequisites": ["CS3250", "CS3251"], 
+        "description": "Computer Science",
+        "id": "60466db602af500027645ad5",
+        "linkedGroup": "5f62c44095d3fa002a531857"
+    },
+    "catalogActivationDate": "1970-01-01",
+    "_score": 1
+},
+{
+    "__catalogCourseId": "CS4262",
+    "__passedCatalogQuery": true,
+    "dateStart": "2021-01-01",
+    "pid": "rkO3jKT3hu",
+    "id": "60df49a46fda051d50c8ad3b",
+    "title": "Foundations of Machine Learning",
+    "subjectCode": {
+        "name": "CS",
+        "prerequisites": ["CS3251"],
+        "description": "Computer Science",
+        "id": "60466db602af500027645ad5",
+        "linkedGroup": "5f62c44095d3fa002a531857"
+    },
+    "catalogActivationDate": "1970-01-01",
+    "_score": 1
+},
+
+{
+    "__catalogCourseId": "CS4277",
+    "__passedCatalogQuery": true,
+    "dateStart": "2020-01-01",
+    "pid": "HyNyF6nhd",
+    "id": "60df48dc9e00f61d7da9999a",
+    "title": "Cyber Security",
+    "subjectCode": {
+        "name": "CS",
+        "prerequisites": [],
+        "description": "Computer Science",
+        "id": "60466db602af500027645ad5",
+        "linkedGroup": "5f62c44095d3fa002a531857"
+    },
+    "catalogActivationDate": "1970-01-01",
+    "_score": 1
+},
+{
+    "__catalogCourseId": "CS4278",
+    "__passedCatalogQuery": true,
+    "dateStart": "2020-01-01",
+    "pid": "SkrBvT2n_",
+    "id": "60df473cf56be652659f7cf9",
+    "title": "Principles of Software Engineering",
+    "subjectCode": {
+        "name": "CS",
+        "prerequisites": ["CS3251"],
+        "description": "Computer Science",
+        "id": "60466db602af500027645ad5",
+        "linkedGroup": "5f62c44095d3fa002a531857"
+    },
+    "catalogActivationDate": "1970-01-01",
+    "_score": 1
+},
+
+
+{
+    "__catalogCourseId": "CS4287",
+    "__passedCatalogQuery": true,
+    "dateStart": "2015-01-01",
+    "pid": "B144ur6hnO",
+    "id": "60df456c3200538a1e8b14de",
+    "title": "Principles of Cloud Computing",
+    "subjectCode": {
+        "name": "CS",
+        "prerequisites": ["CS3281"],
+        "description": "Computer Science",
+        "id": "60466db602af500027645ad5",
+        "linkedGroup": "5f62c44095d3fa002a531857"
+    },
+    "catalogActivationDate": "1970-01-01",
+    "_score": 1
+},
+{
+    "__catalogCourseId": "CS4288",
+    "__passedCatalogQuery": true,
+    "dateStart": "2016-01-01",
+    "pid": "B1eZYHa23_",
+    "id": "60df45799e00f6303fa993cf",
+    "title": "Web-based System Architecture",
+    "subjectCode": {
+        "name": "CS",
+        "prerequisites": ["CS3251"],
+        "description": "Computer Science",
+        "id": "60466db602af500027645ad5",
+        "linkedGroup": "5f62c44095d3fa002a531857"
+    },
+    "catalogActivationDate": "1970-01-01",
+    "_score": 1
+},
+{
+    "__catalogCourseId": "CS4959",
+    "__passedCatalogQuery": true,
+    "dateStart": "2020-01-01",
+    "pid": "r1wrv6hnO",
+    "id": "60df473f320053873b8b1a13",
+    "title": "Computer Science Seminar",
+    "subjectCode": {
+        "name": "CS",
+        "prerequisites": ["CS3251"],
+        "description": "Computer Science",
+        "id": "60466db602af500027645ad5",
+        "linkedGroup": "5f62c44095d3fa002a531857"
+    },
+    "catalogActivationDate": "1970-01-01",
+    "_score": 1
+}]
