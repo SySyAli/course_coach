@@ -22,9 +22,10 @@ interface Message {
 
 interface AIChatbotProps {
     completedCourses: string[];
+    major: string;
 }
 
-const AIChatbot: React.FC<AIChatbotProps> = ({ completedCourses }) => {
+const AIChatbot: React.FC<AIChatbotProps> = ({ completedCourses, major }) => {
     const [messages, setMessages] = useState<Message[]>([]);
     const [input, setInput] = useState('');
     const [isLoading, setIsLoading] = useState(false);
@@ -55,7 +56,8 @@ const AIChatbot: React.FC<AIChatbotProps> = ({ completedCourses }) => {
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ 
                     message: input,
-                    completedCourses: completedCourses
+                    completedCourses: completedCourses,
+                    major: major
                 }),
             });
 

@@ -123,7 +123,7 @@ const Home: React.FC = () => {
           </Box>
         )}
       </VStack>
-      <AIChatbot completedCourses={Array.from(completedCourses)} />
+      <AIChatbot completedCourses={Array.from(completedCourses)} major={major || ''} />
     </Container>
   )
 }
