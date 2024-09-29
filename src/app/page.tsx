@@ -1,7 +1,7 @@
 'use client'
 
 import React, { useState, useEffect, useCallback, useRef } from 'react'
-import { Box, VStack, Heading, Text, Container, Spinner, Tabs, TabList, TabPanels, Tab, TabPanel, useToast, Center } from '@chakra-ui/react'
+import { Box, VStack, Heading, Text, Container, Spinner, Tabs, TabList, TabPanels, Tab, TabPanel, useToast, Flex } from '@chakra-ui/react'
 import MajorSelector from './components/MajorSelector'
 import CourseList from './components/CourseList'
 import CourseFlowchart from './components/CourseFlowchart'
@@ -71,7 +71,7 @@ const Home: React.FC = () => {
   }, [toast])
 
   return (
-    <Container maxW="100%" p={0} height="100vh" display="flex" flexDirection="column">
+    <Container maxW="container.xl" p={0} height="100vh" display="flex" flexDirection="column">
       <VStack spacing={4} align="stretch" flex={1}>
         <Box textAlign="center" p={4}>
           <Heading as="h1" size="2xl" mb={2} color="purple.600">
@@ -82,9 +82,14 @@ const Home: React.FC = () => {
           </Text>
         </Box>
 
-        <Center px={4}>
-          <MajorSelector onMajorChange={setMajor} />
-        </Center>
+        <Flex direction={{ base: 'column', md: 'row' }} spacing={4} px={4}>
+          <Box width={{ base: '100%', md: '60%' }} mb={{ base: 4, md: 0 }}>
+            <MajorSelector onMajorChange={setMajor} />
+          </Box>
+          <Box width={{ base: '100%', md: '40%' }}>
+            <AIChatbot completedCourses={Array.from(completedCourses)} />
+          </Box>
+        </Flex>
 
         {loading ? (
           <Box textAlign="center">
@@ -121,7 +126,6 @@ const Home: React.FC = () => {
           </Box>
         )}
       </VStack>
-      <AIChatbot />
     </Container>
   )
 }

@@ -17,6 +17,22 @@ import 'reactflow/dist/style.css';
 import { Connection, addEdge } from 'reactflow';
 import { Modal, ModalOverlay, ModalContent, ModalHeader, ModalFooter, ModalBody, ModalCloseButton, Button, Text, VStack, Badge, HStack, Box } from '@chakra-ui/react';
 
+// Sample data for development/testing
+const sampleCourses = [
+  {
+    "__catalogCourseId": "BSCI1510",
+    "title": "Introduction to Biological Sciences",
+    "subjectCode": {
+      "name": "BSCI",
+      "prerequisites": ["CHEM1601"],
+      "corequisites": ["CHEM1601", "BSCI1510L"],
+      "description": "Biological Sciences"
+    },
+    "description": "An integrative approach to the science of life for science and engineering students..."
+  },
+  // Add a few more sample courses here...
+];
+
 interface Course {
   __catalogCourseId: string;
   title: string;
@@ -34,12 +50,12 @@ interface CourseFlowchartProps {
 const getLevelColor = (courseId: string): string => {
   const level = courseId.match(/\d/)?.[0];
   switch (level) {
-    case '1': return '#F3E5F5'; // Lightest purple
-    case '2': return '#E1BEE7';
-    case '3': return '#CE93D8';
-    case '4': return '#BA68C8';
-    case '5': return '#AB47BC'; // Darkest purple
-    default: return '#F3E5F5';
+    // case '1': return '#F3E5F5'; // Lightest purple
+    // case '2': return '#E1BEE7';
+    // case '3': return '#CE93D8';
+    // case '4': return '#BA68C8';
+    // case '5': return '#AB47BC'; // Darkest purple
+    default: return '#E1BEE7';
   }
 };
 
