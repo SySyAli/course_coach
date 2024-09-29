@@ -5,6 +5,7 @@ import { Box, VStack, Heading, Text, Container, Spinner, Tabs, TabList, TabPanel
 import MajorSelector from './components/MajorSelector'
 import CourseList from './components/CourseList'
 import CourseFlowchart from './components/CourseFlowchart'
+import AIChatbot from './components/AIChatbot'
 
 const Home: React.FC = () => {
   const [major, setMajor] = useState<string | null>(null)
@@ -121,6 +122,9 @@ const Home: React.FC = () => {
           </Box>
         )}
       </VStack>
+      <div className="fixed bottom-4 right-4">
+        <AIChatbot />
+      </div>
     </Container>
   )
 }
