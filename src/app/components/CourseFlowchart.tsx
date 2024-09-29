@@ -10,6 +10,8 @@ import ReactFlow, {
   Node,
   Edge,
   ReactFlowInstance,
+  getBezierPath,
+  EdgeProps,
 } from 'reactflow';
 import 'reactflow/dist/style.css';
 import { Connection, addEdge } from 'reactflow';
@@ -28,6 +30,49 @@ interface CourseFlowchartProps {
   completedCourses: Set<string>;
   toggleCourseCompletion: (courseId: string) => void;
 }
+
+const CustomEdge = ({
+  id,
+  sourceX,
+  sourceY,
+  targetX,
+  targetY,
+  sourcePosition,
+  targetPosition,
+  style = {},
+  data,
+}: EdgeProps) => {
+  const isCurved = id === 'CHEM1601-BSCI1510';
+  
+  if (isCurved) {
+    const [edgePath] = getBezierPath({
+      sourceX,
+      sourceY,
+      sourcePosition,
+      targetX,
+      targetY,
+      targetPosition,
+      curvature: 0.5,
+    });
+    return (
+      <path
+        id={id}
+        style={style}
+        className="react-flow__edge-path"
+        d={edgePath}
+      />
+    );
+  } else {
+    return (
+      <path
+        id={id}
+        style={style}
+        className="react-flow__edge-path"
+        d={`M ${sourceX},${sourceY} L ${targetX},${targetY}`}
+      />
+    );
+  }
+};
 
 const CourseFlowchart: React.FC<CourseFlowchartProps> = ({ courses, completedCourses, toggleCourseCompletion }) => {
   const [selectedCourse, setSelectedCourse] = useState<Course | null>(null);
@@ -71,7 +116,7 @@ const CourseFlowchart: React.FC<CourseFlowchartProps> = ({ courses, completedCou
     // Add CHEM1601 node
     const chem1601Node: Node = {
       id: 'CHEM1601',
-      position: { x: 100, y: 0 }, // Adjust position as needed
+      position: { x: -150, y: 100 }, // Adjust position to be to the left of BSCI1510
       data: { 
         label: (
           <>
@@ -114,7 +159,7 @@ const CourseFlowchart: React.FC<CourseFlowchartProps> = ({ courses, completedCou
         target: course.__catalogCourseId,
         animated: true,
         style: { stroke: '#9c27b0' },
-        type: 'smoothstep',
+        type: 'custom',
       })),
       ...course.corequisites.map((coreq) => ({
         id: `${course.__catalogCourseId}-${coreq}`,
@@ -122,7 +167,7 @@ const CourseFlowchart: React.FC<CourseFlowchartProps> = ({ courses, completedCou
         target: coreq,
         animated: true,
         style: { stroke: '#27b0b0' },
-        type: 'straight',
+        type: 'custom',
       })),
     ]);
 
@@ -133,7 +178,7 @@ const CourseFlowchart: React.FC<CourseFlowchartProps> = ({ courses, completedCou
       target: 'BSCI1510',
       animated: true,
       style: { stroke: '#9c27b0' },
-      type: 'smoothstep',
+      type: 'custom',
     };
 
     return [...courseEdges, chem1601Edge];
@@ -189,6 +234,7 @@ const CourseFlowchart: React.FC<CourseFlowchartProps> = ({ courses, completedCou
           onNodeClick={onNodeClick}
           onInit={onInit}
           fitView
+          edgeTypes={{ custom: CustomEdge }}
         >
           <Background color="#f8f0ff" gap={16} />
           <Controls />
