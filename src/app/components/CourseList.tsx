@@ -1,49 +1,26 @@
 'use client'
 
 import React from 'react'
-<<<<<<< Updated upstream
 import { Box, VStack, Text, Heading, Badge, HStack, Accordion, AccordionItem, AccordionButton, AccordionPanel, AccordionIcon, Checkbox } from '@chakra-ui/react'
-=======
-import { Box, VStack, Text } from '@chakra-ui/react'
->>>>>>> Stashed changes
 
 interface Course {
   __catalogCourseId: string;
   title: string;
-<<<<<<< Updated upstream
   prerequisites: string[];
   corequisites: string[];
   description: string;
-=======
-  // Add other properties as needed
->>>>>>> Stashed changes
 }
 
 interface CourseListProps {
   courses: Course[];
-<<<<<<< Updated upstream
   completedCourses: Set<string>;
   toggleCourseCompletion: (courseId: string) => void;
 }
 
 const CourseList: React.FC<CourseListProps> = ({ courses, completedCourses, toggleCourseCompletion }) => {
-=======
-}
-
-const CourseList: React.FC<CourseListProps> = ({ courses }) => {
-  if (courses.length === 0) {
-    return (
-      <Box textAlign="center">
-        <Text>No courses found for this major.</Text>
-      </Box>
-    )
-  }
-
->>>>>>> Stashed changes
   return (
-    <VStack spacing={4} align="stretch">
+    <VStack spacing={4} align="stretch" width="100%" maxWidth="800px" margin="auto">
       {courses.map((course) => (
-<<<<<<< Updated upstream
         <Accordion allowToggle key={course.__catalogCourseId}>
           <AccordionItem>
             <h2>
@@ -88,12 +65,6 @@ const CourseList: React.FC<CourseListProps> = ({ courses }) => {
             </AccordionPanel>
           </AccordionItem>
         </Accordion>
-=======
-        <Box key={course.__catalogCourseId} p={4} borderWidth={1} borderRadius="md">
-          <Text fontWeight="bold">{course.__catalogCourseId}</Text>
-          <Text>{course.title}</Text>
-        </Box>
->>>>>>> Stashed changes
       ))}
     </VStack>
   )

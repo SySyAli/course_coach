@@ -10,7 +10,6 @@ const Home: React.FC = () => {
   const [major, setMajor] = useState<string | null>(null)
   const [courses, setCourses] = useState([])
   const [loading, setLoading] = useState(false)
-<<<<<<< Updated upstream
   const [completedCourses, setCompletedCourses] = useState<Set<string>>(new Set())
   const toast = useToast()
   const toastRef = useRef<{ [key: string]: boolean }>({})
@@ -21,35 +20,18 @@ const Home: React.FC = () => {
       setCompletedCourses(new Set(JSON.parse(savedCompletedCourses)))
     }
   }, [])
-=======
-  const [error, setError] = useState<string | null>(null)
->>>>>>> Stashed changes
 
   useEffect(() => {
     if (major) {
       setLoading(true)
-<<<<<<< Updated upstream
-=======
-      setError(null)
->>>>>>> Stashed changes
       fetch(`/bio_data?major=${major}`)
         .then((res) => res.json())
         .then((data) => {
-          console.log('Received data:', data) // Log the entire received data
-          console.log('Data type:', typeof data)
-          console.log('Is array:', Array.isArray(data))
-          console.log('Has courses property:', 'courses' in data)
-          if (data && typeof data === 'object' && 'courses' in data && Array.isArray(data.courses)) {
-            setCourses(data.courses)
-          } else {
-            setError('Received data is not in the expected format')
-            console.error('Unexpected data format:', data)
-          }
+          setCourses(data)
           setLoading(false)
         })
         .catch((error) => {
           console.error('Error fetching courses:', error)
-          setError('Failed to fetch courses')
           setLoading(false)
         })
     }
@@ -106,7 +88,6 @@ const Home: React.FC = () => {
           <Box textAlign="center">
             <Spinner size="xl" color="purple.500" />
           </Box>
-<<<<<<< Updated upstream
         ) : major && courses.length > 0 ? (
           <Tabs isFitted variant="enclosed" flex={1} display="flex" flexDirection="column">
             <TabList mb="1em">
@@ -130,14 +111,6 @@ const Home: React.FC = () => {
               </TabPanel>
             </TabPanels>
           </Tabs>
-=======
-        ) : error ? (
-          <Box textAlign="center">
-            <Text color="red.500">{error}</Text>
-          </Box>
-        ) : major ? (
-          <CourseList courses={courses} />
->>>>>>> Stashed changes
         ) : (
           <Box textAlign="center">
             <Text fontSize="lg" color="gray.600">
@@ -148,10 +121,6 @@ const Home: React.FC = () => {
       </VStack>
     </Container>
   )
-<<<<<<< Updated upstream
 }
 
 export default Home
-=======
-}
->>>>>>> Stashed changes
