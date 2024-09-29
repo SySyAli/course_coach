@@ -28,57 +28,125 @@ interface CourseFlowchartProps {
   toggleCourseCompletion: (courseId: string) => void;
 }
 
+const getLevelColor = (courseId: string): string => {
+  const level = courseId.match(/\d/)?.[0];
+  switch (level) {
+    case '1': return '#E9D8FD'; // lightest purple
+    case '2': return '#D6BCFA';
+    case '3': return '#B794F4';
+    case '4': return '#9F7AEA';
+    case '5': return '#805AD5'; // darkest purple
+    default: return '#E9D8FD';
+  }
+};
+
+const getCourseLevel = (courseId: string): number => {
+  const match = courseId.match(/\d/);
+  return match ? parseInt(match[0]) : 1;
+};
+
 const CourseFlowchart: React.FC<CourseFlowchartProps> = ({ courses, completedCourses, toggleCourseCompletion }) => {
   const [selectedCourse, setSelectedCourse] = useState<Course | null>(null);
 
-  const nodes: Node[] = useMemo(() => {
-    return courses.map((course, index) => ({
-      id: course.__catalogCourseId,
-      position: { x: 100 + (index % 5) * 250, y: 100 + Math.floor(index / 5) * 150 },
-      data: { 
-        label: (
-          <>
-            <strong>{course.__catalogCourseId}</strong>
-            <br />
-            {course.title}
-          </>
-        ),
-        course: course
-      },
-      style: {
-        background: completedCourses.has(course.__catalogCourseId) ? '#90EE90' : '#f0e6ff',
-        color: '#4a0e4e',
-        border: '1px solid #9c27b0',
-        borderRadius: '8px',
-        padding: '10px',
-        fontSize: '12px',
-        fontWeight: 'bold',
-        textAlign: 'center',
-        width: 180,
-      },
-    }));
-  }, [courses, completedCourses]);
+  const { nodes, edges } = useMemo(() => {
+    const courseMap = new Map(courses.map(course => [course.__catalogCourseId, course]));
+    const levelMap = new Map<number, Course[]>();
+    const nodeLevels = new Map<string, number>();
 
-  const edges: Edge[] = useMemo(() => {
-    return courses.flatMap((course) => [
-      ...course.prerequisites.map((prereq) => ({
-        id: `${prereq}-${course.__catalogCourseId}`,
-        source: prereq,
-        target: course.__catalogCourseId,
-        animated: true,
-        style: { stroke: '#9c27b0' },
-        type: 'smoothstep',
-      })),
-      ...course.corequisites.map((coreq) => ({
-        id: `${course.__catalogCourseId}-${coreq}`,
-        source: course.__catalogCourseId,
-        target: coreq,
-        animated: true,
-        style: { stroke: '#27b0b0' },
-        type: 'straight',
-      })),
-    ]);
-  }, [courses]);
+    // Determine the level of each course
+    const determineLevel = (courseId: string, visited = new Set<string>()): number => {
+      if (nodeLevels.has(courseId)) return nodeLevels.get(courseId)!;
+      if (visited.has(courseId)) return 0; // Prevent cycles
+      visited.add(courseId);
+
+      const course = courseMap.get(courseId);
+      if (!course) return 0;
+
+      const courseLevel = getCourseLevel(courseId);
+      const prereqLevels = course.prerequisites.map(prereq => determineLevel(prereq, new Set(visited)));
+      const level = Math.max(courseLevel, ...prereqLevels, 0);
+      nodeLevels.set(courseId, level);
+
+      if (!levelMap.has(level)) levelMap.set(level, []);
+      levelMap.get(level)!.push(course);
+
+      return level;
+    };
+
+    courses.forEach(course => determineLevel(course.__catalogCourseId));
+
+    const nodes: Node[] = [];
+    const edges: Edge[] = [];
+
+    const maxCoursesPerRow = 5;
+    const horizontalSpacing = 200;
+    const verticalSpacing = 150;
+
+    // Create nodes
+    Array.from(levelMap.entries()).forEach(([level, levelCourses]) => {
+      levelCourses.sort((a, b) => getCourseLevel(a.__catalogCourseId) - getCourseLevel(b.__catalogCourseId));
+      
+      levelCourses.forEach((course, index) => {
+        const row = Math.floor(index / maxCoursesPerRow);
+        const col = index % maxCoursesPerRow;
+        
+        nodes.push({
+          id: course.__catalogCourseId,
+          data: { 
+            label: (
+              <>
+                <strong>{course.__catalogCourseId}</strong>
+                <br />
+                {course.title}
+              </>
+            ),
+            course: course
+          },
+          position: { 
+            x: col * horizontalSpacing - (Math.min(levelCourses.length, maxCoursesPerRow) - 1) * horizontalSpacing / 2,
+            y: level * verticalSpacing * 2 + row * verticalSpacing
+          },
+          style: {
+            background: completedCourses.has(course.__catalogCourseId) ? '#90EE90' : getLevelColor(course.__catalogCourseId),
+            color: '#4a0e4e',
+            border: '1px solid #9c27b0',
+            borderRadius: '8px',
+            padding: '10px',
+            fontSize: '12px',
+            fontWeight: 'bold',
+            textAlign: 'center',
+            width: 180,
+          },
+        });
+      });
+    });
+
+    // Create edges
+    courses.forEach(course => {
+      course.prerequisites.forEach(prereq => {
+        edges.push({
+          id: `${prereq}-${course.__catalogCourseId}`,
+          source: prereq,
+          target: course.__catalogCourseId,
+          animated: true,
+          style: { stroke: '#9c27b0' },
+          type: 'smoothstep',
+        });
+      });
+      course.corequisites.forEach(coreq => {
+        edges.push({
+          id: `${course.__catalogCourseId}-${coreq}`,
+          source: course.__catalogCourseId,
+          target: coreq,
+          animated: true,
+          style: { stroke: '#27b0b0' },
+          type: 'straight',
+        });
+      });
+    });
+
+    return { nodes, edges };
+  }, [courses, completedCourses]);
 
   const [nodesState, setNodesState, onNodesChange] = useNodesState(nodes);
   const [edgesState, setEdgesState, onEdgesChange] = useEdgesState(edges);
@@ -96,7 +164,7 @@ const CourseFlowchart: React.FC<CourseFlowchartProps> = ({ courses, completedCou
                 ...n,
                 style: {
                   ...n.style,
-                  background: completedCourses.has(node.id) ? '#f0e6ff' : '#90EE90',
+                  background: completedCourses.has(node.id) ? getLevelColor(node.id) : '#90EE90',
                 },
               }
             : n
@@ -120,6 +188,8 @@ const CourseFlowchart: React.FC<CourseFlowchartProps> = ({ courses, completedCou
           onConnect={onConnect}
           onNodeClick={onNodeClick}
           fitView
+          minZoom={0.1}
+          maxZoom={2}
         >
           <Background color="#f8f0ff" gap={16} />
           <Controls />
@@ -165,7 +235,9 @@ const CourseFlowchart: React.FC<CourseFlowchartProps> = ({ courses, completedCou
                               ...n,
                               style: {
                                 ...n.style,
-                                background: completedCourses.has(selectedCourse.__catalogCourseId) ? '#f0e6ff' : '#90EE90',
+                                background: completedCourses.has(selectedCourse.__catalogCourseId) 
+                                  ? getLevelColor(selectedCourse.__catalogCourseId) 
+                                  : '#90EE90',
                               },
                             }
                           : n
