@@ -10,14 +10,16 @@ interface Course {
     prerequisites: string[];
     corequisites: string[];
   };
-  title: string;  // Add this line
+  title: string;
+  description: string;  // Add this line
 }
 
 interface ProcessedCourse {
   __catalogCourseId: string;
-  title: string;  // Add this line
+  title: string;
   prerequisites: string[];
   corequisites: string[];
+  description: string;
 }
 
 export async function GET(request: Request) {
@@ -37,9 +39,10 @@ export async function GET(request: Request) {
   // Process the courses to keep only the required fields
   const processedCourses: ProcessedCourse[] = courses.map(course => ({
     __catalogCourseId: course.__catalogCourseId,
-    title: course.title,  // Add this line
+    title: course.title,
     prerequisites: course.subjectCode.prerequisites,
     corequisites: course.subjectCode.corequisites,
+    description: course.description,  // Use the new description field
   }));
 
   return NextResponse.json(processedCourses);

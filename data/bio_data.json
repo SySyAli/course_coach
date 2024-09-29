@@ -1,468 +1,288 @@
-[{
+[
+  {
     "__catalogCourseId": "BSCI1001",
-    "__passedCatalogQuery": true,
-    "dateStart": "2020-01-01",
-    "pid": "HJ7wSL63hu",
-    "id": "60df463eaccb93f224bebecf",
     "title": "Commons iSeminar",
     "subjectCode": {
-        "name": "BSCI",
-        "prerequisites": [],
-        "corequisites": [],
-        "description": "Biological Sciences",
-        "id": "60466dae09cf6100261e85a5",
-        "linkedGroup": "5f62c427a712c5002a25526f"
+      "name": "BSCI",
+      "prerequisites": [],
+      "corequisites": [],
+      "description": "Biological Sciences"
     },
-    "catalogActivationDate": "1970-01-01",
-    "_score": 1
-},
-{
+    "description": "Topics vary. General Elective credit only. [1] (No AXLE credit)"
+  },
+  {
     "__catalogCourseId": "BSCI1100",
-    "__passedCatalogQuery": true,
-    "dateStart": "2020-01-01",
-    "pid": "rkevSUTh3d",
-    "id": "60df463edac2153f1296666f",
     "title": "Biology Today",
     "subjectCode": {
-        "name": "BSCI",
-        "prerequisites": [],
-        "corequisites": ["BSCI1100L"],
-        "description": "Biological Sciences",
-        "id": "60466dae09cf6100261e85a5",
-        "linkedGroup": "5f62c427a712c5002a25526f"
+      "name": "BSCI",
+      "prerequisites": [],
+      "corequisites": ["BSCI1100L"],
+      "description": "Biological Sciences"
     },
-    "catalogActivationDate": "1970-01-01",
-    "_score": 1
-},
-{
+    "description": "Broad coverage of the biological sciences presenting evolution as the unifying concept. Particular emphasis on basic biological processes in cells and the relationships/interactions between organisms and their environment. Topics include cell structure and function, genetics and inheritance, evolution and diversity, populations, communities and ecosystems, and topics related to biology and society. Not open to students who have earned credit for BSCI 1510 or 1511 without permission. Total credit for this course and BSCI 1510 or 1511 will not exceed 3 hours. Credit hours reduced from second course taken (or from test or transfer credit) as appropriate. [3] (MNS)"
+  },
+  {
     "__catalogCourseId": "BSCI1100L",
-    "__passedCatalogQuery": true,
-    "dateStart": "2020-01-01",
-    "pid": "Sk-vBU6n2_",
-    "id": "60df463edac21585ec966670",
     "title": "Biology Today Laboratory",
     "subjectCode": {
-        "name": "BSCI",
-        "prerequisites": [],
-        "corequisites": ["BSCI1100"],
-        "description": "Biological Sciences",
-        "id": "60466dae09cf6100261e85a5",
-        "linkedGroup": "5f62c427a712c5002a25526f"
+      "name": "BSCI",
+      "prerequisites": [],
+      "corequisites": ["BSCI1100"],
+      "description": "Biological Sciences"
     },
-    "catalogActivationDate": "1970-01-01",
-    "_score": 1
-},
-{
+    "description": "Laboratory investigations of the genetics, physiology, and ecology of plants and animals. One three-hour laboratory per week to accompany 1100. Not open to students who have earned credit for BSCI 1510L, 1511L, or 1512L without permission. Total credit for this course and BSCI 1510L or 1511L will not exceed 1 credit hour; total credit for this course and BSCI 1512L will not exceed 2 credit hours. Credit hours reduced from second course taken (or from test or transfer credit) as appropriate. Satisfies the AXLE lab course requirement when completed with 1100. Co- or pre-requisite: 1100. [1] (No AXLE credit)"
+  },
+  {
     "__catalogCourseId": "BSCI1103",
-    "__passedCatalogQuery": true,
-    "dateStart": "2020-01-01",
-    "pid": "Syl8rLa2hd",
-    "id": "60df463ef56be635899f7ac5",
     "title": "Green Earth: The Biodiversity and Evolution of Plants",
     "subjectCode": {
-        "name": "BSCI",
-        "prerequisites": [],
-        "corequisites": ["BSCI1103L"],
-        "description": "Biological Sciences",
-        "id": "60466dae09cf6100261e85a5",
-        "linkedGroup": "5f62c427a712c5002a25526f"
+      "name": "BSCI",
+      "prerequisites": [],
+      "corequisites": ["BSCI1103L"],
+      "description": "Biological Sciences"
     },
-    "catalogActivationDate": "1970-01-01",
-    "_score": 1
-},
-{
+    "description": "Evolution of biodiversity from the Cambrian period through today. Theories and challenges of its conservation. Case studies drawn from Hawaii, Madagascar and Australia. Not intended for students planning to major in biological sciences. Not open to students who have earned credit for 1510 or 1511 without permission. Total credit for this course and 1510 or 1511 will not exceed 3 credit hours. Credit hours reduced from second course taken (or from test or transfer credit) as appropriate. [3] (MNS)"
+  },
+  {
     "__catalogCourseId": "BSCI1103L",
-    "__passedCatalogQuery": true,
-    "dateStart": "2019-01-01",
-    "pid": "BkKke8ph2_",
-    "id": "60df45e7accb93b3f4bebe3b",
     "title": "Green Earth Laboratory: The Biodiversity and Evolution of Land Plants",
     "subjectCode": {
-        "name": "BSCI",
-        "prerequisites": [],
-        "corequisites": ["BSCI1103"],
-        "description": "Biological Sciences",
-        "id": "60466dae09cf6100261e85a5",
-        "linkedGroup": "5f62c427a712c5002a25526f"
+      "name": "BSCI",
+      "prerequisites": [],
+      "corequisites": ["BSCI1103"],
+      "description": "Biological Sciences"
     },
-    "catalogActivationDate": "1970-01-01",
-    "_score": 1
-},
-{
+    "description": "Not open to students who have earned credit for 1510L, 1511L, or 1512L without permission. Total credit for this course and 1510L or 1511L will not exceed 1 credit hour; total credit for this course and 1512L will not exceed 2 credit hours. Credit hours reduced from second course taken (or from test or transfer credit) as appropriate. Corequisite: 1103. Satisfies the AXLE lab course requirement when completed with 1103. [1]"
+  },
+  {
     "__catalogCourseId": "BSCI1510",
-    "__passedCatalogQuery": true,
-    "dateStart": "2020-01-01",
-    "pid": "r1Ir86nnu",
-    "id": "60df463ef56be63f529f7ac4",
     "title": "Introduction to Biological Sciences",
     "subjectCode": {
-        "name": "BSCI",
-        "prerequisites": ["CHEM1601"],
-        "corequisites": ["CHEM1601", "BSCI1510L"],
-        "description": "Biological Sciences",
-        "id": "60466dae09cf6100261e85a5",
-        "linkedGroup": "5f62c427a712c5002a25526f"
+      "name": "BSCI",
+      "prerequisites": ["CHEM1601"],
+      "corequisites": ["CHEM1601", "BSCI1510L"],
+      "description": "Biological Sciences"
     },
-    "catalogActivationDate": "1970-01-01",
-    "_score": 1
-},
-{
+    "description": "An integrative approach to the science of life for science and engineering students. Macromolecular structure and function. Cell structure, reproduction, metabolism, and energy production. Genomes, replication, gene structure, RNA, and protein synthesis. Not open to students who have earned credit for BSCI 1100, 1103, or 1105 without permission. Total credit for this course and BSCI 1100 or 1103 will not exceed 3 credit hours; total credit for this course and BSCI 1105 will not exceed 4 credit hours. Credit hours reduced from second course taken (or from test or transfer credit) as appropriate. Prerequisite or corequisite: CHEM 1601. [3] (MNS)"
+  },
+  {
     "__catalogCourseId": "BSCI1510L",
-    "__passedCatalogQuery": true,
-    "dateStart": "2020-01-01",
-    "pid": "BJ-PBLan3_",
-    "id": "60df463efb83f81f45421423",
     "title": "Biological Sciences Laboratory",
     "subjectCode": {
-        "name": "BSCI",
-        "prerequisites": [],
-        "corequisites": ["BSCI1510"],
-        "description": "Biological Sciences",
-        "id": "60466dae09cf6100261e85a5",
-        "linkedGroup": "5f62c427a712c5002a25526f"
+      "name": "BSCI",
+      "prerequisites": [],
+      "corequisites": ["BSCI1510"],
+      "description": "Biological Sciences"
     },
-    "catalogActivationDate": "1970-01-01",
-    "_score": 1
-},
-{
+    "description": "Laboratory to accompany 1510. One three-hour laboratory per week. Satisfies the AXLE lab course requirement when completed with 1510. Not open to students who have earned credit for BSCI 1100L, 1103L, or 1105L without permission. [1] (No AXLE credit)"
+  },
+  {
     "__catalogCourseId": "BSCI1511",
-    "__passedCatalogQuery": true,
-    "dateStart": "2020-01-01",
-    "pid": "rJDBIp32O",
-    "id": "60df463eefb1656769f82465",
     "title": "Introduction to Biological Sciences",
     "subjectCode": {
-        "name": "BSCI",
-        "prerequisites": ["BSCI1510"],
-        "corequisites": ["BSCI1511L"],
-        "description": "Biological Sciences",
-        "id": "60466dae09cf6100261e85a5",
-        "linkedGroup": "5f62c427a712c5002a25526f"
+      "name": "BSCI",
+      "prerequisites": ["BSCI1510"],
+      "corequisites": ["BSCI1511L"],
+      "description": "Biological Sciences"
     },
-    "catalogActivationDate": "1970-01-01",
-    "_score": 1
-},
-{
+    "description": "Continuation of 1510. Cell communication. Physiology, organ function and development. Mendelian and population genetics. Evolution, ecology, and speciation. Populations, ecosystems, and conservation biology. Not open to students who have earned credit for BSCI 1100, 1103, or 1105 without permission. Total credit for this course and BSCI 1100 or 1103 will not exceed 3 credit hours; total credit for this course and BSCI 1105 will not exceed 4 credit hours. Credit hours reduced from second course taken (or from test or transfer credit) as appropriate. Prerequisite: 1510. [3] (MNS)"
+  },
+  {
     "__catalogCourseId": "BSCI1511L",
-    "__passedCatalogQuery": true,
-    "dateStart": "2020-01-01",
-    "pid": "ryEwHLp33O",
-    "id": "60df463edac2153706966672",
     "title": "Biological Sciences Laboratory",
     "subjectCode": {
-        "name": "BSCI",
-        "prerequisites": ["BSCI1510"],
-        "corequisites": ["BSCI1511"],
-        "description": "Biological Sciences",
-        "id": "60466dae09cf6100261e85a5",
-        "linkedGroup": "5f62c427a712c5002a25526f"
+      "name": "BSCI",
+      "prerequisites": ["BSCI1510"],
+      "corequisites": ["BSCI1511"],
+      "description": "Biological Sciences"
     },
-    "catalogActivationDate": "1970-01-01",
-    "_score": 1
-},
-{
+    "description": "Laboratory to accompany 1511. One three-hour laboratory per week. Satisfies the AXLE lab course requirement when completed with 1511. Not open to students who have earned credit for BSCI 1100L, 1103L, 1105, or 1512L without permission. Total credit for this course and BSCI 1100L or 1103L will not exceed 1 hour; total credit for this course and BSCI 1105 will not exceed 4 hours; total credit for this course and BSCI 1512L will not exceed 2 hours. Credit hours reduced from second course taken (or from test or transfer credit) as appropriate. Prerequisite or corequisite: 1511. [1] (No AXLE credit)"
+  },
+  {
     "__catalogCourseId": "BSCI1512L",
-    "__passedCatalogQuery": true,
-    "dateStart": "2020-01-01",
-    "pid": "HybvHLTn3O",
-    "id": "60df463e320053fe948b1719",
     "title": "Biological Sciences Laboratory",
     "subjectCode": {
-        "name": "BSCI",
-        "prerequisites": ["BSCI1510"],
-        "corequisites": ["BSCI1511"],
-        "description": "Biological Sciences",
-        "id": "60466dae09cf6100261e85a5",
-        "linkedGroup": "5f62c427a712c5002a25526f"
+      "name": "BSCI",
+      "prerequisites": ["BSCI1510"],
+      "corequisites": ["BSCI1511"],
+      "description": "Biological Sciences"
     },
-    "catalogActivationDate": "1970-01-01",
-    "_score": 1
-},
-{
+    "description": "Alternative to 1511L. Directed research projects with emphasis on experimental design and analysis. Satisfies the AXLE lab course requirement when completed with 1511. Offered on a graded basis only. Not open to students who have earned credit for BSCI 1100L, 1105, or 1511L without permission. Total credit for this course and BSCI 1100L or 1511L will not exceed 2 hours; total credit for this course and BSCI 1105 will not exceed 5 hours. Credit hours reduced from second course taken (or from test or transfer credit) as appropriate. Prerequisite or corequisite: 1511. Prerequisite: 1510L. [2] (No AXLE credit)"
+  },
+  {
     "__catalogCourseId": "BSCI2210",
-    "__passedCatalogQuery": true,
-    "dateStart": "2020-01-01",
-    "pid": "HJgDS86h2_",
-    "id": "60df463ef56be6dc119f7ac7",
     "title": "Principles of Genetics",
     "subjectCode": {
-        "name": "BSCI",
-        "prerequisites": ["BSCI1511"],
-        "corequisites": [],
-        "description": "Biological Sciences",
-        "id": "60466dae09cf6100261e85a5",
-        "linkedGroup": "5f62c427a712c5002a25526f"
+      "name": "BSCI",
+      "prerequisites": ["BSCI1511"],
+      "corequisites": [],
+      "description": "Biological Sciences"
     },
-    "catalogActivationDate": "1970-01-01",
-    "_score": 1
-},
-{
+    "description": "Basic principles and mechanisms of inheritance discussed and related to other biological phenomena and problems. Prerequisite: 1511. [3] (MNS)"
+  },
+  {
     "__catalogCourseId": "BSCI2210L",
-    "__passedCatalogQuery": true,
-    "dateStart": "2020-01-01",
-    "pid": "SkHPB8ahhd",
-    "id": "60df463edac215ff1b966674",
     "title": "Genetics Laboratory",
     "subjectCode": {
-        "name": "BSCI",
-        "prerequisites": ["BSCI2210"],
-        "corequisites": ["BSCI2210"],
-        "description": "Biological Sciences",
-        "id": "60466dae09cf6100261e85a5",
-        "linkedGroup": "5f62c427a712c5002a25526f"
+      "name": "BSCI",
+      "prerequisites": ["BSCI2210"],
+      "corequisites": ["BSCI2210"],
+      "description": "Biological Sciences"
     },
-    "catalogActivationDate": "1970-01-01",
-    "_score": 1
-},
-{
+    "description": "One three-hour laboratory and discussion period per week. Satisfies the AXLE lab course requirement when completed with 2210. Prerequisite or corequisite: 2210. [1] (No AXLE credit)"
+  },
+  {
     "__catalogCourseId": "BSCI2238",
-    "__passedCatalogQuery": true,
-    "dateStart": "2020-01-01",
-    "pid": "B1GwBUTnhO",
-    "id": "60df463ef56be60c919f7ac9",
     "title": "Ecology",
     "subjectCode": {
-        "name": "BSCI",
-        "prerequisites": ["BSCI1511"],
-        "corequisites": [],
-        "description": "Biological Sciences",
-        "id": "60466dae09cf6100261e85a5",
-        "linkedGroup": "5f62c427a712c5002a25526f"
+      "name": "BSCI",
+      "prerequisites": ["BSCI1511"],
+      "corequisites": [],
+      "description": "Biological Sciences"
     },
-    "catalogActivationDate": "1970-01-01",
-    "_score": 1
-},
-{
+    "description": "Population biology, evolutionary ecology, community structure, with emphasis on species interactions, including competition, predation, and symbiosis. Prerequisite: 1511. [3] (MNS)"
+  },
+  {
     "__catalogCourseId": "BSCI2520",
-    "__passedCatalogQuery": true,
-    "dateStart": "2018-01-01",
-    "pid": "B1Zf6BTn3O",
-    "id": "60df45b99e00f6daffa99428",
     "title": "Biochemistry",
     "subjectCode": {
-        "name": "BSCI",
-        "prerequisites": [["BSCI1510", "CHBE2150"], ["CHEM2211", "CHEM2211"]],
-        "corequisites": [],
-        "description": "Biological Sciences",
-        "id": "60466dae09cf6100261e85a5",
-        "linkedGroup": "5f62c427a712c5002a25526f"
+      "name": "BSCI",
+      "prerequisites": [["BSCI1510", "CHBE2150"], ["CHEM2211", "CHEM2211"]],
+      "corequisites": [],
+      "description": "Biological Sciences"
     },
-    "catalogActivationDate": "1970-01-01",
-    "_score": 1
-},
-{
+    "description": "Structures and mechanisms of action of biological molecules, proteins, nucleic acids, lipids, and polysaccharides. Enzymology. Carbohydrate metabolism. Prerequisite: Either 1510 or CHBE 2150; and either CHEM 2211 or 2221. [3] (MNS)"
+  },
+  {
     "__catalogCourseId": "BSCI3230",
-    "__passedCatalogQuery": true,
-    "dateStart": "2020-01-01",
-    "pid": "rJzDHLThh_",
-    "id": "60df463efb83f8b44a421422",
     "title": "Biological Clocks",
     "subjectCode": {
-        "name": "BSCI",
-        "prerequisites": ["BSCI1511"],
-        "corequisites": [],
-        "description": "Biological Sciences",
-        "id": "60466dae09cf6100261e85a5",
-        "linkedGroup": "5f62c427a712c5002a25526f"
+      "name": "BSCI",
+      "prerequisites": ["BSCI1511"],
+      "corequisites": [],
+      "description": "Biological Sciences"
     },
-    "catalogActivationDate": "1970-01-01",
-    "_score": 1
-},
-{
+    "description": "Study of innate mechanisms for measurement of time in living organisms. Emphasis on the functional significance and physiological basis of biological clocks in animals and humans. Topics include circadian rhythms, time-compensated celestial navigation, photoperiodism, and the role of biological clocks in human behavior. Prerequisite: 1511. [3] (MNS)"
+  },
+  {
     "__catalogCourseId": "BSCI3232",
-    "__passedCatalogQuery": true,
-    "dateStart": "2019-01-01",
-    "pid": "H1elIp2nu",
-    "id": "60df45e8f56be654049f7a33",
     "title": "Biodiversity, Climate Change and Our Health",
     "subjectCode": {
-        "name": "BSCI",
-        "prerequisites": ["BSCI1511"],
-        "corequisites": [],
-        "description": "Biological Sciences",
-        "id": "60466dae09cf6100261e85a5",
-        "linkedGroup": "5f62c427a712c5002a25526f"
+      "name": "BSCI",
+      "prerequisites": ["BSCI1511"],
+      "corequisites": [],
+      "description": "Biological Sciences"
     },
-    "catalogActivationDate": "1970-01-01",
-    "_score": 1
-},
-{
+    "description": "Impacts of climate change on biological and ecological systems from the Paleozoic era to today. Inter-play of earth's systems, climate, and biological innovations. Effects on our natural resources, and consequences for our health. Prerequisite: 1511. [3] (MNS)"
+  },
+  {
     "__catalogCourseId": "BSCI3236",
-    "__passedCatalogQuery": true,
-    "dateStart": "2020-01-01",
-    "pid": "SkvBI6h2O",
-    "id": "60df463ef56be629819f7ac6",
     "title": "Parasitology",
     "subjectCode": {
-        "name": "BSCI",
-        "prerequisites": ["BSCI1511"],
-        "corequisites": [],
-        "description": "Biological Sciences",
-        "id": "60466dae09cf6100261e85a5",
-        "linkedGroup": "5f62c427a712c5002a25526f"
+      "name": "BSCI",
+      "prerequisites": ["BSCI1511"],
+      "corequisites": [],
+      "description": "Biological Sciences"
     },
-    "catalogActivationDate": "1970-01-01",
-    "_score": 1
-},
-{
+    "description": "Biology and epidemiology of eukaryotic parasites of medical and veterinary significance. Diagnosis, treatment, and control of parasitic protists, platyhelminthes, nematodes, and arthropods. Impact on global health. Prerequisite: 1511. [3] (MNS)"
+  },
+  {
     "__catalogCourseId": "BSCI3254",
-    "__passedCatalogQuery": true,
-    "dateStart": "2020-01-01",
-    "pid": "HJtB8phnO",
-    "id": "60df4640320053bf938b171c",
     "title": "Neurobiology of Behavior",
     "subjectCode": {
-        "name": "BSCI",
-        "prerequisites": [["BSCI1511"], ["NSC2201"]],
-        "corequisites": [],
-        "description": "Biological Sciences",
-        "id": "60466dae09cf6100261e85a5",
-        "linkedGroup": "5f62c427a712c5002a25526f"
+      "name": "BSCI",
+      "prerequisites": [["BSCI1511"], ["NSC2201"]],
+      "corequisites": [],
+      "description": "Biological Sciences"
     },
-    "catalogActivationDate": "1970-01-01",
-    "_score": 1
-},
-{
+    "description": "Nerve cell interactions in neuronal networks of the central nervous system of animals and their impact for regulating behavior. Sensory systems, sensory-motor integration, central processing of information, neuronal-hormonal interactions; and brain anatomy and organization in invertebrates and vertebrates. Prerequisite: BSCI 1511 or NSC 2201. [3] (MNS)"
+  },
+  {
     "__catalogCourseId": "BSCI3270",
-    "__passedCatalogQuery": true,
-    "dateStart": "2021-01-01",
-    "pid": "BJkYF6n3_",
-    "id": "60df49769c3c981d38a7e84d",
     "title": "Statistical Methods in Biology",
     "subjectCode": {
-        "name": "BSCI",
-        "prerequisites": ["BSCI1511"],
-        "corequisites": [],
-        "description": "Biological Sciences",
-        "id": "60466dae09cf6100261e85a5",
-        "linkedGroup": "5f62c427a712c5002a25526f"
+      "name": "BSCI",
+      "prerequisites": ["BSCI1511"],
+      "corequisites": [],
+      "description": "Biological Sciences"
     },
-    "catalogActivationDate": "1970-01-01",
-    "_score": 1
-},
-{
+    "description": "An introduction to statistical methods used in the analysis of biological experiments, including the application of computer software packages. Emphasis on testing of hypotheses and experimental design. Topics include descriptive statistics, analysis of variance, regression, correlation, contingency analysis, and the testing of methods for sampling natural populations. Prerequisite: 1511. [3] (MNS)"
+  },
+  {
     "__catalogCourseId": "BSCI3850",
-    "__passedCatalogQuery": true,
-    "dateStart": "2020-01-01",
-    "pid": "BJFH8ahn_",
-    "id": "60df4640fb83f86336421424",
     "title": "Independent Reading",
     "subjectCode": {
-        "name": "BSCI",
-        "prerequisites": [],
-        "corequisites": [],
-        "description": "Biological Sciences",
-        "id": "60466dae09cf6100261e85a5",
-        "linkedGroup": "5f62c427a712c5002a25526f"
+      "name": "BSCI",
+      "prerequisites": [],
+      "corequisites": [],
+      "description": "Biological Sciences"
     },
-    "catalogActivationDate": "1970-01-01",
-    "_score": 1
-},
-{
+    "description": "Reading and discussion of research papers with a member of the faculty. Prerequisite: consent of Biological Sciences 3850 coordinator before the end of the previous semester. May be repeated for credit once if there is no duplication in topic. Students may enroll in more than one section of this course each semester. [1; maximum of 2 credits total for all semesters of BSCI 3850] (No AXLE credit)"
+  },
+  {
     "__catalogCourseId": "BSCI3860",
-    "__passedCatalogQuery": true,
-    "dateStart": "2020-01-01",
-    "pid": "SyhSUT23_",
-    "id": "60df4644efb1653e99f82488",
     "title": "Introduction to Research",
     "subjectCode": {
-        "name": "BSCI",
-        "prerequisites": ["BSCI1510", "BSCI1511"],
-        "corequisites": [],
-        "description": "Biological Sciences",
-        "id": "60466dae09cf6100261e85a5",
-        "linkedGroup": "5f62c427a712c5002a25526f"
+      "name": "BSCI",
+      "prerequisites": ["BSCI1510", "BSCI1511"],
+      "corequisites": [],
+      "description": "Biological Sciences"
     },
-    "catalogActivationDate": "1970-01-01",
-    "_score": 1
-},
-{
+    "description": "Work in the laboratory of a member of the Biological Sciences faculty. Term paper required. Consent of course coordinator and enrollment by arrangement before the end of the previous semester is required. Prerequisite: 1510. Prerequisite or corequisite: 1511. [1] (No AXLE credit)"
+  },
+  {
     "__catalogCourseId": "BSCI3861",
-    "__passedCatalogQuery": true,
-    "dateStart": "2020-01-01",
-    "pid": "BkgFBITn2d",
-    "id": "60df4641f56be6889a9f7acf",
     "title": "Directed Laboratory Research",
     "subjectCode": {
-        "name": "BSCI",
-        "prerequisites": ["BSCI1511", "BSCI3860"],
-        "corequisites": [],
-        "description": "Biological Sciences",
-        "id": "60466dae09cf6100261e85a5",
-        "linkedGroup": "5f62c427a712c5002a25526f"
+      "name": "BSCI",
+      "prerequisites": ["BSCI1511", "BSCI3860"],
+      "corequisites": [],
+      "description": "Biological Sciences"
     },
-    "catalogActivationDate": "1970-01-01",
-    "_score": 1
-},
-{
+    "description": "Directed student research on a project conceived by a member of the Biological Sciences faculty. Enrollment by arrangement before the end of the previous semester. May be taken only once, and participants ordinarily expected to have overall grade point average of B or better. Offered on a graded basis only. Prerequisite: 1511, one intermediate BSCI course appropriate to the major or 3860, and consent of Biological Sciences 3861 coordinator. [2-4] (No AXLE credit)"
+  },
+  {
     "__catalogCourseId": "BSCI3890",
-    "__passedCatalogQuery": true,
-    "dateStart": "2021-01-01",
-    "pid": "H1zhutah3O",
-    "id": "60df4978f56be633ec9f80c1",
     "title": "Special Topics in Biological Sciences",
     "subjectCode": {
-        "name": "BSCI",
-        "prerequisites": ["BSCI1511"],
-        "corequisites": [],
-        "description": "Biological Sciences",
-        "id": "60466dae09cf6100261e85a5",
-        "linkedGroup": "5f62c427a712c5002a25526f"
+      "name": "BSCI",
+      "prerequisites": ["BSCI1511"],
+      "corequisites": [],
+      "description": "Biological Sciences"
     },
-    "catalogActivationDate": "1970-01-01",
-    "_score": 1
-},
-{
+    "description": "Topics vary. May be repeated for credit more than once by permission of the director of undergraduate studies. Prerequisite: 1511. [3] (MNS)"
+  },
+  {
     "__catalogCourseId": "BSCI3961",
-    "__passedCatalogQuery": true,
-    "dateStart": "2020-01-01",
-    "pid": "HyjH8T3hu",
-    "id": "60df4643fb83f8308642142d",
     "title": "Independent Laboratory Research",
     "subjectCode": {
-        "name": "BSCI",
-        "prerequisites": ["BSCI3861"],
-        "corequisites": [],
-        "description": "Biological Sciences",
-        "id": "60466dae09cf6100261e85a5",
-        "linkedGroup": "5f62c427a712c5002a25526f"
+      "name": "BSCI",
+      "prerequisites": ["BSCI3861"],
+      "corequisites": [],
+      "description": "Biological Sciences"
     },
-    "catalogActivationDate": "1970-01-01",
-    "_score": 1
-},
-{
+    "description": "Original student research on a defined problem in Biological Sciences and under the supervision of Biological Sciences faculty. Some independence in the design and execution of the problem. Enrollment by arrangement before the end of the previous semester. Prerequisite: 3861, consent of Biological Sciences 3961 coordinator, cumulative grade point average of B. May be repeated for credit more than once, but students may earn only up to 6 credits per semester of enrollment. [2-6] (No AXLE credit)"
+  },
+  {
     "__catalogCourseId": "BSCI3965",
-    "__passedCatalogQuery": true,
-    "dateStart": "2021-01-01",
-    "pid": "BkHdtp22u",
-    "id": "60df496c789034497efc3724",
     "title": "Undergraduate Seminar",
     "subjectCode": {
-        "name": "BSCI",
-        "prerequisites": [],
-        "corequisites": [],
-        "description": "Biological Sciences",
-        "id": "60466dae09cf6100261e85a5",
-        "linkedGroup": "5f62c427a712c5002a25526f"
+      "name": "BSCI",
+      "prerequisites": [],
+      "corequisites": [],
+      "description": "Biological Sciences"
     },
-    "catalogActivationDate": "1970-01-01",
-    "_score": 1
-},
-{
+    "description": "Discussions and papers based on readings in research journals. Topics vary. Prerequisite: fulfillment of the intermediate course requirements for the major. May be repeated for credit more than once if there is no duplication in topic, but only two hours may count toward the major. Students may enroll in more than one section of this course each semester. [2] (No AXLE credit)"
+  },
+  {
     "__catalogCourseId": "BSCI4999",
-    "__passedCatalogQuery": true,
-    "dateStart": "2020-01-01",
-    "pid": "rkZtB8622d",
-    "id": "60df4641f56be627d19f7ad0",
     "title": "Honors Research",
     "subjectCode": {
-        "name": "BSCI",
-        "prerequisites": [],
-        "corequisites": [],
-        "description": "Biological Sciences",
-        "id": "60466dae09cf6100261e85a5",
-        "linkedGroup": "5f62c427a712c5002a25526f"
+      "name": "BSCI",
+      "prerequisites": [],
+      "corequisites": [],
+      "description": "Biological Sciences"
     },
-    "catalogActivationDate": "1970-01-01",
-    "_score": 1
-}]
+    "description": "Open only to majors in the Honors Program. May be repeated for credit more than once, but students may earn only up to 6 credits per semester of enrollment. [4-6] (No AXLE credit)"
+  }
+]

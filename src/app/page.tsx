@@ -1,7 +1,7 @@
 'use client'
 
-import React, { useState, useEffect } from 'react'
-import { Box, VStack, Heading, Text, Container, Spinner, Tabs, TabList, TabPanels, Tab, TabPanel } from '@chakra-ui/react'
+import React, { useState, useEffect, useCallback } from 'react'
+import { Box, VStack, Heading, Text, Container, Spinner, Tabs, TabList, TabPanels, Tab, TabPanel, useToast } from '@chakra-ui/react'
 import MajorSelector from './components/MajorSelector'
 import CourseList from './components/CourseList'
 import CourseFlowchart from './components/CourseFlowchart'
@@ -10,6 +10,15 @@ const Home: React.FC = () => {
   const [major, setMajor] = useState<string | null>(null)
   const [courses, setCourses] = useState([])
   const [loading, setLoading] = useState(false)
+  const [completedCourses, setCompletedCourses] = useState<Set<string>>(new Set())
+  const toast = useToast()
+
+  useEffect(() => {
+    const savedCompletedCourses = localStorage.getItem('completedCourses')
+    if (savedCompletedCourses) {
+      setCompletedCourses(new Set(JSON.parse(savedCompletedCourses)))
+    }
+  }, [])
 
   useEffect(() => {
     if (major) {
@@ -26,6 +35,31 @@ const Home: React.FC = () => {
         })
     }
   }, [major])
+
+  const toggleCourseCompletion = useCallback((courseId: string) => {
+    setCompletedCourses((prev) => {
+      const newSet = new Set(prev)
+      if (newSet.has(courseId)) {
+        newSet.delete(courseId)
+        toast({
+          title: "Course marked as incomplete",
+          status: "info",
+          duration: 2000,
+          isClosable: true,
+        })
+      } else {
+        newSet.add(courseId)
+        toast({
+          title: "Course marked as complete",
+          status: "success",
+          duration: 2000,
+          isClosable: true,
+        })
+      }
+      localStorage.setItem('completedCourses', JSON.stringify(Array.from(newSet)))
+      return newSet
+    })
+  }, [toast])
 
   return (
     <Container maxW="container.xl" py={10}>
@@ -53,11 +87,19 @@ const Home: React.FC = () => {
             </TabList>
             <TabPanels>
               <TabPanel>
-                <CourseList courses={courses} />
+                <CourseList 
+                  courses={courses} 
+                  completedCourses={completedCourses}
+                  toggleCourseCompletion={toggleCourseCompletion}
+                />
               </TabPanel>
               <TabPanel>
                 <Box height="700px" width="100%">
-                  <CourseFlowchart courses={courses} />
+                  <CourseFlowchart 
+                    courses={courses} 
+                    completedCourses={completedCourses}
+                    toggleCourseCompletion={toggleCourseCompletion}
+                  />
                 </Box>
               </TabPanel>
             </TabPanels>
