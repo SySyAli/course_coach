@@ -213,7 +213,7 @@
     "title": "Independent Reading",
     "subjectCode": {
       "name": "BSCI",
-      "prerequisites": [],
+      "prerequisites": ["BSCI2210"],
       "corequisites": [],
       "description": "Biological Sciences"
     },
@@ -268,7 +268,7 @@
     "title": "Undergraduate Seminar",
     "subjectCode": {
       "name": "BSCI",
-      "prerequisites": [],
+      "prerequisites": ["BSCI2210"],
       "corequisites": [],
       "description": "Biological Sciences"
     },
@@ -279,7 +279,7 @@
     "title": "Honors Research",
     "subjectCode": {
       "name": "BSCI",
-      "prerequisites": [],
+      "prerequisites": ["BSCI2210"],
       "corequisites": [],
       "description": "Biological Sciences"
     },
