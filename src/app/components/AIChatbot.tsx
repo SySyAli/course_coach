@@ -116,7 +116,7 @@ const AIChatbot: React.FC<AIChatbotProps> = ({ completedCourses, major }) => {
                         className="handle"
                         cursor="move"
                     >
-                        <Text fontWeight="bold">Virtual Advisor</Text>
+                        <Text fontWeight="bold">Virtual Coach</Text>
                         {/* <Spacer /> */}
                         <IconButton
                             aria-label="Toggle chat"

@@ -75,7 +75,7 @@ const Home: React.FC = () => {
       <VStack spacing={4} align="stretch" flex={1}>
         <Box textAlign="center" p={4}>
           <Heading as="h1" size="2xl" mb={2} color="purple.600">
-            Course Explorer
+            CourseCoach
           </Heading>
           <Text fontSize="xl" color="gray.600">
             Discover courses for your major
