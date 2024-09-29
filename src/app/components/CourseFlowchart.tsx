@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 /* eslint-disable @typescript-eslint/no-unused-vars */
 'use client'
 
@@ -138,7 +139,7 @@ const CourseFlowchart: React.FC<CourseFlowchartProps> = ({ courses, completedCou
         padding: '10px',
         fontSize: '12px',
         fontWeight: 'bold',
-        textAlign: 'center',
+        textAlign: 'center' as const,
         width: 180,
       },
     }));
