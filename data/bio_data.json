@@ -1,0 +1,468 @@
+[{
+    "__catalogCourseId": "BSCI1001",
+    "__passedCatalogQuery": true,
+    "dateStart": "2020-01-01",
+    "pid": "HJ7wSL63hu",
+    "id": "60df463eaccb93f224bebecf",
+    "title": "Commons iSeminar",
+    "subjectCode": {
+        "name": "BSCI",
+        "prerequisites": [],
+        "corequisites": [],
+        "description": "Biological Sciences",
+        "id": "60466dae09cf6100261e85a5",
+        "linkedGroup": "5f62c427a712c5002a25526f"
+    },
+    "catalogActivationDate": "1970-01-01",
+    "_score": 1
+},
+{
+    "__catalogCourseId": "BSCI1100",
+    "__passedCatalogQuery": true,
+    "dateStart": "2020-01-01",
+    "pid": "rkevSUTh3d",
+    "id": "60df463edac2153f1296666f",
+    "title": "Biology Today",
+    "subjectCode": {
+        "name": "BSCI",
+        "prerequisites": [],
+        "corequisites": ["BSCI1100L"],
+        "description": "Biological Sciences",
+        "id": "60466dae09cf6100261e85a5",
+        "linkedGroup": "5f62c427a712c5002a25526f"
+    },
+    "catalogActivationDate": "1970-01-01",
+    "_score": 1
+},
+{
+    "__catalogCourseId": "BSCI1100L",
+    "__passedCatalogQuery": true,
+    "dateStart": "2020-01-01",
+    "pid": "Sk-vBU6n2_",
+    "id": "60df463edac21585ec966670",
+    "title": "Biology Today Laboratory",
+    "subjectCode": {
+        "name": "BSCI",
+        "prerequisites": [],
+        "corequisites": ["BSCI1100"],
+        "description": "Biological Sciences",
+        "id": "60466dae09cf6100261e85a5",
+        "linkedGroup": "5f62c427a712c5002a25526f"
+    },
+    "catalogActivationDate": "1970-01-01",
+    "_score": 1
+},
+{
+    "__catalogCourseId": "BSCI1103",
+    "__passedCatalogQuery": true,
+    "dateStart": "2020-01-01",
+    "pid": "Syl8rLa2hd",
+    "id": "60df463ef56be635899f7ac5",
+    "title": "Green Earth: The Biodiversity and Evolution of Plants",
+    "subjectCode": {
+        "name": "BSCI",
+        "prerequisites": [],
+        "corequisites": ["BSCI1103L"],
+        "description": "Biological Sciences",
+        "id": "60466dae09cf6100261e85a5",
+        "linkedGroup": "5f62c427a712c5002a25526f"
+    },
+    "catalogActivationDate": "1970-01-01",
+    "_score": 1
+},
+{
+    "__catalogCourseId": "BSCI1103L",
+    "__passedCatalogQuery": true,
+    "dateStart": "2019-01-01",
+    "pid": "BkKke8ph2_",
+    "id": "60df45e7accb93b3f4bebe3b",
+    "title": "Green Earth Laboratory: The Biodiversity and Evolution of Land Plants",
+    "subjectCode": {
+        "name": "BSCI",
+        "prerequisites": [],
+        "corequisites": ["BSCI1103"],
+        "description": "Biological Sciences",
+        "id": "60466dae09cf6100261e85a5",
+        "linkedGroup": "5f62c427a712c5002a25526f"
+    },
+    "catalogActivationDate": "1970-01-01",
+    "_score": 1
+},
+{
+    "__catalogCourseId": "BSCI1510",
+    "__passedCatalogQuery": true,
+    "dateStart": "2020-01-01",
+    "pid": "r1Ir86nnu",
+    "id": "60df463ef56be63f529f7ac4",
+    "title": "Introduction to Biological Sciences",
+    "subjectCode": {
+        "name": "BSCI",
+        "prerequisites": ["CHEM1601"],
+        "corequisites": ["CHEM1601", "BSCI1510L"],
+        "description": "Biological Sciences",
+        "id": "60466dae09cf6100261e85a5",
+        "linkedGroup": "5f62c427a712c5002a25526f"
+    },
+    "catalogActivationDate": "1970-01-01",
+    "_score": 1
+},
+{
+    "__catalogCourseId": "BSCI1510L",
+    "__passedCatalogQuery": true,
+    "dateStart": "2020-01-01",
+    "pid": "BJ-PBLan3_",
+    "id": "60df463efb83f81f45421423",
+    "title": "Biological Sciences Laboratory",
+    "subjectCode": {
+        "name": "BSCI",
+        "prerequisites": [],
+        "corequisites": ["BSCI1510"],
+        "description": "Biological Sciences",
+        "id": "60466dae09cf6100261e85a5",
+        "linkedGroup": "5f62c427a712c5002a25526f"
+    },
+    "catalogActivationDate": "1970-01-01",
+    "_score": 1
+},
+{
+    "__catalogCourseId": "BSCI1511",
+    "__passedCatalogQuery": true,
+    "dateStart": "2020-01-01",
+    "pid": "rJDBIp32O",
+    "id": "60df463eefb1656769f82465",
+    "title": "Introduction to Biological Sciences",
+    "subjectCode": {
+        "name": "BSCI",
+        "prerequisites": ["BSCI1510"],
+        "corequisites": ["BSCI1511L"],
+        "description": "Biological Sciences",
+        "id": "60466dae09cf6100261e85a5",
+        "linkedGroup": "5f62c427a712c5002a25526f"
+    },
+    "catalogActivationDate": "1970-01-01",
+    "_score": 1
+},
+{
+    "__catalogCourseId": "BSCI1511L",
+    "__passedCatalogQuery": true,
+    "dateStart": "2020-01-01",
+    "pid": "ryEwHLp33O",
+    "id": "60df463edac2153706966672",
+    "title": "Biological Sciences Laboratory",
+    "subjectCode": {
+        "name": "BSCI",
+        "prerequisites": ["BSCI1510"],
+        "corequisites": ["BSCI1511"],
+        "description": "Biological Sciences",
+        "id": "60466dae09cf6100261e85a5",
+        "linkedGroup": "5f62c427a712c5002a25526f"
+    },
+    "catalogActivationDate": "1970-01-01",
+    "_score": 1
+},
+{
+    "__catalogCourseId": "BSCI1512L",
+    "__passedCatalogQuery": true,
+    "dateStart": "2020-01-01",
+    "pid": "HybvHLTn3O",
+    "id": "60df463e320053fe948b1719",
+    "title": "Biological Sciences Laboratory",
+    "subjectCode": {
+        "name": "BSCI",
+        "prerequisites": ["BSCI1510"],
+        "corequisites": ["BSCI1511"],
+        "description": "Biological Sciences",
+        "id": "60466dae09cf6100261e85a5",
+        "linkedGroup": "5f62c427a712c5002a25526f"
+    },
+    "catalogActivationDate": "1970-01-01",
+    "_score": 1
+},
+{
+    "__catalogCourseId": "BSCI2210",
+    "__passedCatalogQuery": true,
+    "dateStart": "2020-01-01",
+    "pid": "HJgDS86h2_",
+    "id": "60df463ef56be6dc119f7ac7",
+    "title": "Principles of Genetics",
+    "subjectCode": {
+        "name": "BSCI",
+        "prerequisites": ["BSCI1511"],
+        "corequisites": [],
+        "description": "Biological Sciences",
+        "id": "60466dae09cf6100261e85a5",
+        "linkedGroup": "5f62c427a712c5002a25526f"
+    },
+    "catalogActivationDate": "1970-01-01",
+    "_score": 1
+},
+{
+    "__catalogCourseId": "BSCI2210L",
+    "__passedCatalogQuery": true,
+    "dateStart": "2020-01-01",
+    "pid": "SkHPB8ahhd",
+    "id": "60df463edac215ff1b966674",
+    "title": "Genetics Laboratory",
+    "subjectCode": {
+        "name": "BSCI",
+        "prerequisites": ["BSCI2210"],
+        "corequisites": ["BSCI2210"],
+        "description": "Biological Sciences",
+        "id": "60466dae09cf6100261e85a5",
+        "linkedGroup": "5f62c427a712c5002a25526f"
+    },
+    "catalogActivationDate": "1970-01-01",
+    "_score": 1
+},
+{
+    "__catalogCourseId": "BSCI2238",
+    "__passedCatalogQuery": true,
+    "dateStart": "2020-01-01",
+    "pid": "B1GwBUTnhO",
+    "id": "60df463ef56be60c919f7ac9",
+    "title": "Ecology",
+    "subjectCode": {
+        "name": "BSCI",
+        "prerequisites": ["BSCI1511"],
+        "corequisites": [],
+        "description": "Biological Sciences",
+        "id": "60466dae09cf6100261e85a5",
+        "linkedGroup": "5f62c427a712c5002a25526f"
+    },
+    "catalogActivationDate": "1970-01-01",
+    "_score": 1
+},
+{
+    "__catalogCourseId": "BSCI2520",
+    "__passedCatalogQuery": true,
+    "dateStart": "2018-01-01",
+    "pid": "B1Zf6BTn3O",
+    "id": "60df45b99e00f6daffa99428",
+    "title": "Biochemistry",
+    "subjectCode": {
+        "name": "BSCI",
+        "prerequisites": [["BSCI1510", "CHBE2150"], ["CHEM2211", "CHEM2211"]],
+        "corequisites": [],
+        "description": "Biological Sciences",
+        "id": "60466dae09cf6100261e85a5",
+        "linkedGroup": "5f62c427a712c5002a25526f"
+    },
+    "catalogActivationDate": "1970-01-01",
+    "_score": 1
+},
+{
+    "__catalogCourseId": "BSCI3230",
+    "__passedCatalogQuery": true,
+    "dateStart": "2020-01-01",
+    "pid": "rJzDHLThh_",
+    "id": "60df463efb83f8b44a421422",
+    "title": "Biological Clocks",
+    "subjectCode": {
+        "name": "BSCI",
+        "prerequisites": ["BSCI1511"],
+        "corequisites": [],
+        "description": "Biological Sciences",
+        "id": "60466dae09cf6100261e85a5",
+        "linkedGroup": "5f62c427a712c5002a25526f"
+    },
+    "catalogActivationDate": "1970-01-01",
+    "_score": 1
+},
+{
+    "__catalogCourseId": "BSCI3232",
+    "__passedCatalogQuery": true,
+    "dateStart": "2019-01-01",
+    "pid": "H1elIp2nu",
+    "id": "60df45e8f56be654049f7a33",
+    "title": "Biodiversity, Climate Change and Our Health",
+    "subjectCode": {
+        "name": "BSCI",
+        "prerequisites": ["BSCI1511"],
+        "corequisites": [],
+        "description": "Biological Sciences",
+        "id": "60466dae09cf6100261e85a5",
+        "linkedGroup": "5f62c427a712c5002a25526f"
+    },
+    "catalogActivationDate": "1970-01-01",
+    "_score": 1
+},
+{
+    "__catalogCourseId": "BSCI3236",
+    "__passedCatalogQuery": true,
+    "dateStart": "2020-01-01",
+    "pid": "SkvBI6h2O",
+    "id": "60df463ef56be629819f7ac6",
+    "title": "Parasitology",
+    "subjectCode": {
+        "name": "BSCI",
+        "prerequisites": ["BSCI1511"],
+        "corequisites": [],
+        "description": "Biological Sciences",
+        "id": "60466dae09cf6100261e85a5",
+        "linkedGroup": "5f62c427a712c5002a25526f"
+    },
+    "catalogActivationDate": "1970-01-01",
+    "_score": 1
+},
+{
+    "__catalogCourseId": "BSCI3254",
+    "__passedCatalogQuery": true,
+    "dateStart": "2020-01-01",
+    "pid": "HJtB8phnO",
+    "id": "60df4640320053bf938b171c",
+    "title": "Neurobiology of Behavior",
+    "subjectCode": {
+        "name": "BSCI",
+        "prerequisites": [["BSCI1511"], ["NSC2201"]],
+        "corequisites": [],
+        "description": "Biological Sciences",
+        "id": "60466dae09cf6100261e85a5",
+        "linkedGroup": "5f62c427a712c5002a25526f"
+    },
+    "catalogActivationDate": "1970-01-01",
+    "_score": 1
+},
+{
+    "__catalogCourseId": "BSCI3270",
+    "__passedCatalogQuery": true,
+    "dateStart": "2021-01-01",
+    "pid": "BJkYF6n3_",
+    "id": "60df49769c3c981d38a7e84d",
+    "title": "Statistical Methods in Biology",
+    "subjectCode": {
+        "name": "BSCI",
+        "prerequisites": ["BSCI1511"],
+        "corequisites": [],
+        "description": "Biological Sciences",
+        "id": "60466dae09cf6100261e85a5",
+        "linkedGroup": "5f62c427a712c5002a25526f"
+    },
+    "catalogActivationDate": "1970-01-01",
+    "_score": 1
+},
+{
+    "__catalogCourseId": "BSCI3850",
+    "__passedCatalogQuery": true,
+    "dateStart": "2020-01-01",
+    "pid": "BJFH8ahn_",
+    "id": "60df4640fb83f86336421424",
+    "title": "Independent Reading",
+    "subjectCode": {
+        "name": "BSCI",
+        "prerequisites": [],
+        "corequisites": [],
+        "description": "Biological Sciences",
+        "id": "60466dae09cf6100261e85a5",
+        "linkedGroup": "5f62c427a712c5002a25526f"
+    },
+    "catalogActivationDate": "1970-01-01",
+    "_score": 1
+},
+{
+    "__catalogCourseId": "BSCI3860",
+    "__passedCatalogQuery": true,
+    "dateStart": "2020-01-01",
+    "pid": "SyhSUT23_",
+    "id": "60df4644efb1653e99f82488",
+    "title": "Introduction to Research",
+    "subjectCode": {
+        "name": "BSCI",
+        "prerequisites": ["BSCI1510", "BSCI1511"],
+        "corequisites": [],
+        "description": "Biological Sciences",
+        "id": "60466dae09cf6100261e85a5",
+        "linkedGroup": "5f62c427a712c5002a25526f"
+    },
+    "catalogActivationDate": "1970-01-01",
+    "_score": 1
+},
+{
+    "__catalogCourseId": "BSCI3861",
+    "__passedCatalogQuery": true,
+    "dateStart": "2020-01-01",
+    "pid": "BkgFBITn2d",
+    "id": "60df4641f56be6889a9f7acf",
+    "title": "Directed Laboratory Research",
+    "subjectCode": {
+        "name": "BSCI",
+        "prerequisites": ["BSCI1511", "BSCI3860"],
+        "corequisites": [],
+        "description": "Biological Sciences",
+        "id": "60466dae09cf6100261e85a5",
+        "linkedGroup": "5f62c427a712c5002a25526f"
+    },
+    "catalogActivationDate": "1970-01-01",
+    "_score": 1
+},
+{
+    "__catalogCourseId": "BSCI3890",
+    "__passedCatalogQuery": true,
+    "dateStart": "2021-01-01",
+    "pid": "H1zhutah3O",
+    "id": "60df4978f56be633ec9f80c1",
+    "title": "Special Topics in Biological Sciences",
+    "subjectCode": {
+        "name": "BSCI",
+        "prerequisites": ["BSCI1511"],
+        "corequisites": [],
+        "description": "Biological Sciences",
+        "id": "60466dae09cf6100261e85a5",
+        "linkedGroup": "5f62c427a712c5002a25526f"
+    },
+    "catalogActivationDate": "1970-01-01",
+    "_score": 1
+},
+{
+    "__catalogCourseId": "BSCI3961",
+    "__passedCatalogQuery": true,
+    "dateStart": "2020-01-01",
+    "pid": "HyjH8T3hu",
+    "id": "60df4643fb83f8308642142d",
+    "title": "Independent Laboratory Research",
+    "subjectCode": {
+        "name": "BSCI",
+        "prerequisites": ["BSCI3861"],
+        "corequisites": [],
+        "description": "Biological Sciences",
+        "id": "60466dae09cf6100261e85a5",
+        "linkedGroup": "5f62c427a712c5002a25526f"
+    },
+    "catalogActivationDate": "1970-01-01",
+    "_score": 1
+},
+{
+    "__catalogCourseId": "BSCI3965",
+    "__passedCatalogQuery": true,
+    "dateStart": "2021-01-01",
+    "pid": "BkHdtp22u",
+    "id": "60df496c789034497efc3724",
+    "title": "Undergraduate Seminar",
+    "subjectCode": {
+        "name": "BSCI",
+        "prerequisites": [],
+        "corequisites": [],
+        "description": "Biological Sciences",
+        "id": "60466dae09cf6100261e85a5",
+        "linkedGroup": "5f62c427a712c5002a25526f"
+    },
+    "catalogActivationDate": "1970-01-01",
+    "_score": 1
+},
+{
+    "__catalogCourseId": "BSCI4999",
+    "__passedCatalogQuery": true,
+    "dateStart": "2020-01-01",
+    "pid": "rkZtB8622d",
+    "id": "60df4641f56be627d19f7ad0",
+    "title": "Honors Research",
+    "subjectCode": {
+        "name": "BSCI",
+        "prerequisites": [],
+        "corequisites": [],
+        "description": "Biological Sciences",
+        "id": "60466dae09cf6100261e85a5",
+        "linkedGroup": "5f62c427a712c5002a25526f"
+    },
+    "catalogActivationDate": "1970-01-01",
+    "_score": 1
+}]
