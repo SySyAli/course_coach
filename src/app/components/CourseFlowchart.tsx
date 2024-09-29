@@ -1,6 +1,6 @@
 'use client'
 
-import React, { useCallback, useMemo, useState, useEffect } from 'react';
+import React, { useCallback, useMemo, useState, useEffect, useRef } from 'react';
 import ReactFlow, {
   Background,
   Controls,
@@ -15,7 +15,7 @@ import ReactFlow, {
 } from 'reactflow';
 import 'reactflow/dist/style.css';
 import { Connection, addEdge } from 'reactflow';
-import { Modal, ModalOverlay, ModalContent, ModalHeader, ModalFooter, ModalBody, ModalCloseButton, Button, Text, VStack, Badge, HStack } from '@chakra-ui/react';
+import { Modal, ModalOverlay, ModalContent, ModalHeader, ModalFooter, ModalBody, ModalCloseButton, Button, Text, VStack, Badge, HStack, Box } from '@chakra-ui/react';
 
 interface Course {
   __catalogCourseId: string;
@@ -77,6 +77,7 @@ const CustomEdge = ({
 const CourseFlowchart: React.FC<CourseFlowchartProps> = ({ courses, completedCourses, toggleCourseCompletion }) => {
   const [selectedCourse, setSelectedCourse] = useState<Course | null>(null);
   const [reactFlowInstance, setReactFlowInstance] = useState<ReactFlowInstance | null>(null);
+  const flowRef = useRef<HTMLDivElement>(null);
 
   const getNodeColor = useCallback((course: Course) => {
     if (completedCourses.has(course.__catalogCourseId)) {
@@ -215,6 +216,24 @@ const CourseFlowchart: React.FC<CourseFlowchartProps> = ({ courses, completedCou
 
   const closeModal = () => setSelectedCourse(null);
 
+  useEffect(() => {
+    const resizeObserver = new ResizeObserver(() => {
+      if (reactFlowInstance) {
+        reactFlowInstance.fitView();
+      }
+    });
+
+    if (flowRef.current) {
+      resizeObserver.observe(flowRef.current);
+    }
+
+    return () => {
+      if (flowRef.current) {
+        resizeObserver.unobserve(flowRef.current);
+      }
+    };
+  }, [reactFlowInstance]);
+
   const onInit = useCallback((instance: ReactFlowInstance) => {
     setReactFlowInstance(instance);
     setTimeout(() => {
@@ -223,8 +242,8 @@ const CourseFlowchart: React.FC<CourseFlowchartProps> = ({ courses, completedCou
   }, []);
 
   return (
-    <>
-      <div style={{ width: '100%', height: '100vh' }}>
+    <Box width="100%" height="100vh" position="relative">
+      <div ref={flowRef} style={{ width: '100%', height: '100%', position: 'absolute', top: 0, left: 0 }}>
         <ReactFlow
           nodes={nodesState}
           edges={edgesState}
@@ -287,7 +306,7 @@ const CourseFlowchart: React.FC<CourseFlowchartProps> = ({ courses, completedCou
           </ModalFooter>
         </ModalContent>
       </Modal>
-    </>
+    </Box>
   );
 };
 

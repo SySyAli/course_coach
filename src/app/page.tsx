@@ -71,9 +71,9 @@ const Home: React.FC = () => {
   }, [toast])
 
   return (
-    <Container maxW="container.xl" py={10} height="100vh" display="flex" flexDirection="column">
-      <VStack spacing={8} align="stretch" flex={1}>
-        <Box textAlign="center">
+    <Container maxW="100%" p={0} height="100vh" display="flex" flexDirection="column">
+      <VStack spacing={4} align="stretch" flex={1}>
+        <Box textAlign="center" p={4}>
           <Heading as="h1" size="2xl" mb={2} color="purple.600">
             Course Explorer
           </Heading>
@@ -82,7 +82,9 @@ const Home: React.FC = () => {
           </Text>
         </Box>
 
-        <MajorSelector onMajorChange={setMajor} />
+        <Box px={4}>
+          <MajorSelector onMajorChange={setMajor} />
+        </Box>
 
         {loading ? (
           <Box textAlign="center">
@@ -90,7 +92,7 @@ const Home: React.FC = () => {
           </Box>
         ) : major && courses.length > 0 ? (
           <Tabs isFitted variant="enclosed" flex={1} display="flex" flexDirection="column">
-            <TabList mb="1em">
+            <TabList>
               <Tab>Course List</Tab>
               <Tab>Course Flowchart</Tab>
             </TabList>
@@ -102,7 +104,7 @@ const Home: React.FC = () => {
                   toggleCourseCompletion={toggleCourseCompletion}
                 />
               </TabPanel>
-              <TabPanel height="100%">
+              <TabPanel height="100%" p={0}>
                 <CourseFlowchart 
                   courses={courses} 
                   completedCourses={completedCourses}
