@@ -71,8 +71,8 @@ const Home: React.FC = () => {
   }, [toast])
 
   return (
-    <Container maxW="container.xl" py={10} height="100vh" display="flex" flexDirection="column">
-      <VStack spacing={8} align="stretch" flex={1}>
+    <Container maxW="container.xl" py={10}>
+      <VStack spacing={8} align="stretch">
         <Box textAlign="center">
           <Heading as="h1" size="2xl" mb={2} color="purple.600">
             Course Explorer
@@ -89,25 +89,27 @@ const Home: React.FC = () => {
             <Spinner size="xl" color="purple.500" />
           </Box>
         ) : major && courses.length > 0 ? (
-          <Tabs isFitted variant="enclosed" flex={1} display="flex" flexDirection="column">
+          <Tabs isFitted variant="enclosed">
             <TabList mb="1em">
               <Tab>Course List</Tab>
               <Tab>Course Flowchart</Tab>
             </TabList>
-            <TabPanels flex={1}>
-              <TabPanel height="100%">
+            <TabPanels>
+              <TabPanel>
                 <CourseList 
                   courses={courses} 
                   completedCourses={completedCourses}
                   toggleCourseCompletion={toggleCourseCompletion}
                 />
               </TabPanel>
-              <TabPanel height="100%">
-                <CourseFlowchart 
-                  courses={courses} 
-                  completedCourses={completedCourses}
-                  toggleCourseCompletion={toggleCourseCompletion}
-                />
+              <TabPanel>
+                <Box height="700px" width="100%">
+                  <CourseFlowchart 
+                    courses={courses} 
+                    completedCourses={completedCourses}
+                    toggleCourseCompletion={toggleCourseCompletion}
+                  />
+                </Box>
               </TabPanel>
             </TabPanels>
           </Tabs>
