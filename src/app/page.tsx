@@ -82,12 +82,9 @@ const Home: React.FC = () => {
           </Text>
         </Box>
 
-        <Flex direction={{ base: 'column', md: 'row' }} spacing={4} px={4}>
+        <Flex direction={{ base: 'column', md: 'row' }} px={4}>
           <Box width={{ base: '100%', md: '60%' }} mb={{ base: 4, md: 0 }}>
             <MajorSelector onMajorChange={setMajor} />
-          </Box>
-          <Box width={{ base: '100%', md: '40%' }}>
-            <AIChatbot completedCourses={Array.from(completedCourses)} />
           </Box>
         </Flex>
 
@@ -126,6 +123,7 @@ const Home: React.FC = () => {
           </Box>
         )}
       </VStack>
+      <AIChatbot completedCourses={Array.from(completedCourses)} />
     </Container>
   )
 }
