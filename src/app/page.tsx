@@ -1,6 +1,6 @@
 'use client'
 
-import React, { useState, useEffect, useCallback } from 'react'
+import React, { useState, useEffect, useCallback, useRef } from 'react'
 import { Box, VStack, Heading, Text, Container, Spinner, Tabs, TabList, TabPanels, Tab, TabPanel, useToast } from '@chakra-ui/react'
 import MajorSelector from './components/MajorSelector'
 import CourseList from './components/CourseList'
@@ -12,6 +12,7 @@ const Home: React.FC = () => {
   const [loading, setLoading] = useState(false)
   const [completedCourses, setCompletedCourses] = useState<Set<string>>(new Set())
   const toast = useToast()
+  const toastRef = useRef<{ [key: string]: boolean }>({})
 
   useEffect(() => {
     const savedCompletedCourses = localStorage.getItem('completedCourses')
@@ -39,24 +40,32 @@ const Home: React.FC = () => {
   const toggleCourseCompletion = useCallback((courseId: string) => {
     setCompletedCourses((prev) => {
       const newSet = new Set(prev)
-      if (newSet.has(courseId)) {
+      const isCompleted = newSet.has(courseId)
+      
+      if (isCompleted) {
         newSet.delete(courseId)
-        toast({
-          title: "Course marked as incomplete",
-          status: "info",
-          duration: 2000,
-          isClosable: true,
-        })
       } else {
         newSet.add(courseId)
+      }
+
+      localStorage.setItem('completedCourses', JSON.stringify(Array.from(newSet)))
+
+      // Show toast only if it hasn't been shown for this courseId in this render cycle
+      if (!toastRef.current[courseId]) {
         toast({
-          title: "Course marked as complete",
-          status: "success",
+          title: isCompleted ? "Course marked as incomplete" : "Course marked as complete",
+          status: isCompleted ? "info" : "success",
           duration: 2000,
           isClosable: true,
         })
+        toastRef.current[courseId] = true
+
+        // Reset the toast ref after a short delay
+        setTimeout(() => {
+          toastRef.current[courseId] = false
+        }, 100)
       }
-      localStorage.setItem('completedCourses', JSON.stringify(Array.from(newSet)))
+
       return newSet
     })
   }, [toast])
