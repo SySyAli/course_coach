@@ -31,6 +31,18 @@ interface CourseFlowchartProps {
   toggleCourseCompletion: (courseId: string) => void;
 }
 
+const getLevelColor = (courseId: string): string => {
+  const level = courseId.match(/\d/)?.[0];
+  switch (level) {
+    case '1': return '#F3E5F5'; // Lightest purple
+    case '2': return '#E1BEE7';
+    case '3': return '#CE93D8';
+    case '4': return '#BA68C8';
+    case '5': return '#AB47BC'; // Darkest purple
+    default: return '#F3E5F5';
+  }
+};
+
 const CustomEdge = ({
   id,
   sourceX,
@@ -83,7 +95,7 @@ const CourseFlowchart: React.FC<CourseFlowchartProps> = ({ courses, completedCou
       return '#90EE90'; // Green for completed courses
     }
     const canTake = course.prerequisites.every(prereq => completedCourses.has(prereq));
-    return canTake ? '#87CEFA' : '#f0e6ff'; // Light blue for available courses, default color otherwise
+    return canTake ? '#87CEFA' : getLevelColor(course.__catalogCourseId); // Light blue for available courses, level color otherwise
   }, [completedCourses]);
 
   const nodes: Node[] = useMemo(() => {
@@ -134,7 +146,7 @@ const CourseFlowchart: React.FC<CourseFlowchartProps> = ({ courses, completedCou
         }
       },
       style: {
-        background: '#f0e6ff',
+        background: getLevelColor('CHEM1601'),
         color: '#4a0e4e',
         border: '1px solid #9c27b0',
         borderRadius: '8px',
