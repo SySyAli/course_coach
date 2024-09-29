@@ -1,6 +1,6 @@
 'use client'
 
-import React, { useCallback, useMemo, useState } from 'react';
+import React, { useCallback, useMemo, useState, useEffect } from 'react';
 import ReactFlow, {
   Background,
   Controls,
@@ -9,6 +9,7 @@ import ReactFlow, {
   useEdgesState,
   Node,
   Edge,
+  ReactFlowInstance,
 } from 'reactflow';
 import 'reactflow/dist/style.css';
 import { Connection, addEdge } from 'reactflow';
@@ -30,6 +31,15 @@ interface CourseFlowchartProps {
 
 const CourseFlowchart: React.FC<CourseFlowchartProps> = ({ courses, completedCourses, toggleCourseCompletion }) => {
   const [selectedCourse, setSelectedCourse] = useState<Course | null>(null);
+  const [reactFlowInstance, setReactFlowInstance] = useState<ReactFlowInstance | null>(null);
+
+  const getNodeColor = useCallback((course: Course) => {
+    if (completedCourses.has(course.__catalogCourseId)) {
+      return '#90EE90'; // Green for completed courses
+    }
+    const canTake = course.prerequisites.every(prereq => completedCourses.has(prereq));
+    return canTake ? '#87CEFA' : '#f0e6ff'; // Light blue for available courses, default color otherwise
+  }, [completedCourses]);
 
   const nodes: Node[] = useMemo(() => {
     return courses.map((course, index) => ({
@@ -46,7 +56,7 @@ const CourseFlowchart: React.FC<CourseFlowchartProps> = ({ courses, completedCou
         course: course
       },
       style: {
-        background: completedCourses.has(course.__catalogCourseId) ? '#90EE90' : '#f0e6ff',
+        background: getNodeColor(course),
         color: '#4a0e4e',
         border: '1px solid #9c27b0',
         borderRadius: '8px',
@@ -57,7 +67,9 @@ const CourseFlowchart: React.FC<CourseFlowchartProps> = ({ courses, completedCou
         width: 180,
       },
     }));
-  }, [courses, completedCourses]);
+  }, [courses, completedCourses, getNodeColor]);
+
+  const [nodesState, setNodesState, onNodesChange] = useNodesState(nodes);
 
   const edges: Edge[] = useMemo(() => {
     return courses.flatMap((course) => [
@@ -80,38 +92,47 @@ const CourseFlowchart: React.FC<CourseFlowchartProps> = ({ courses, completedCou
     ]);
   }, [courses]);
 
-  const [nodesState, setNodesState, onNodesChange] = useNodesState(nodes);
   const [edgesState, setEdgesState, onEdgesChange] = useEdgesState(edges);
 
   const onConnect = useCallback((params: Connection) => setEdgesState((eds) => addEdge(params, eds)), [setEdgesState]);
 
+  const updateNodeColors = useCallback(() => {
+    setNodesState((nds) =>
+      nds.map((n) => ({
+        ...n,
+        style: {
+          ...n.style,
+          background: getNodeColor(n.data.course),
+        },
+      }))
+    );
+  }, [setNodesState, getNodeColor]);
+
   const onNodeClick = useCallback((event: React.MouseEvent, node: Node) => {
     if (event.ctrlKey || event.metaKey) {
       toggleCourseCompletion(node.id);
-      // Update node color immediately
-      setNodesState((nds) =>
-        nds.map((n) =>
-          n.id === node.id
-            ? {
-                ...n,
-                style: {
-                  ...n.style,
-                  background: completedCourses.has(node.id) ? '#f0e6ff' : '#90EE90',
-                },
-              }
-            : n
-        )
-      );
+      updateNodeColors();
     } else {
       setSelectedCourse(node.data.course);
     }
-  }, [toggleCourseCompletion, completedCourses, setNodesState]);
+  }, [toggleCourseCompletion, updateNodeColors]);
+
+  useEffect(() => {
+    updateNodeColors();
+  }, [completedCourses, updateNodeColors]);
 
   const closeModal = () => setSelectedCourse(null);
 
+  const onInit = useCallback((instance: ReactFlowInstance) => {
+    setReactFlowInstance(instance);
+    setTimeout(() => {
+      instance.fitView({ duration: 800 });
+    }, 100);
+  }, []);
+
   return (
     <>
-      <div style={{ width: '100%', height: '100%', border: '1px solid #ccc' }}>
+      <div style={{ width: '100%', height: '100vh' }}>
         <ReactFlow
           nodes={nodesState}
           edges={edgesState}
@@ -119,6 +140,7 @@ const CourseFlowchart: React.FC<CourseFlowchartProps> = ({ courses, completedCou
           onEdgesChange={onEdgesChange}
           onConnect={onConnect}
           onNodeClick={onNodeClick}
+          onInit={onInit}
           fitView
         >
           <Background color="#f8f0ff" gap={16} />
@@ -157,20 +179,7 @@ const CourseFlowchart: React.FC<CourseFlowchartProps> = ({ courses, completedCou
                 onClick={() => {
                   if (selectedCourse) {
                     toggleCourseCompletion(selectedCourse.__catalogCourseId);
-                    // Update node color immediately
-                    setNodesState((nds) =>
-                      nds.map((n) =>
-                        n.id === selectedCourse.__catalogCourseId
-                          ? {
-                              ...n,
-                              style: {
-                                ...n.style,
-                                background: completedCourses.has(selectedCourse.__catalogCourseId) ? '#f0e6ff' : '#90EE90',
-                              },
-                            }
-                          : n
-                      )
-                    );
+                    updateNodeColors();
                   }
                 }}
               >
