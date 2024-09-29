@@ -42,7 +42,7 @@ const CourseFlowchart: React.FC<CourseFlowchartProps> = ({ courses, completedCou
   }, [completedCourses]);
 
   const nodes: Node[] = useMemo(() => {
-    return courses.map((course, index) => ({
+    const courseNodes = courses.map((course, index) => ({
       id: course.__catalogCourseId,
       position: { x: 100 + (index % 5) * 250, y: 100 + Math.floor(index / 5) * 150 },
       data: { 
@@ -67,12 +67,47 @@ const CourseFlowchart: React.FC<CourseFlowchartProps> = ({ courses, completedCou
         width: 180,
       },
     }));
+
+    // Add CHEM1601 node
+    const chem1601Node: Node = {
+      id: 'CHEM1601',
+      position: { x: 100, y: 0 }, // Adjust position as needed
+      data: { 
+        label: (
+          <>
+            <strong>CHEM1601</strong>
+            <br />
+            General Chemistry
+          </>
+        ),
+        course: {
+          __catalogCourseId: 'CHEM1601',
+          title: 'General Chemistry',
+          prerequisites: [],
+          corequisites: [],
+          description: 'Prerequisite for BSCI1510'
+        }
+      },
+      style: {
+        background: '#f0e6ff',
+        color: '#4a0e4e',
+        border: '1px solid #9c27b0',
+        borderRadius: '8px',
+        padding: '10px',
+        fontSize: '12px',
+        fontWeight: 'bold',
+        textAlign: 'center',
+        width: 180,
+      },
+    };
+
+    return [...courseNodes, chem1601Node];
   }, [courses, completedCourses, getNodeColor]);
 
   const [nodesState, setNodesState, onNodesChange] = useNodesState(nodes);
 
   const edges: Edge[] = useMemo(() => {
-    return courses.flatMap((course) => [
+    const courseEdges = courses.flatMap((course) => [
       ...course.prerequisites.map((prereq) => ({
         id: `${prereq}-${course.__catalogCourseId}`,
         source: prereq,
@@ -90,6 +125,18 @@ const CourseFlowchart: React.FC<CourseFlowchartProps> = ({ courses, completedCou
         type: 'straight',
       })),
     ]);
+
+    // Add edge from CHEM1601 to BSCI1510
+    const chem1601Edge: Edge = {
+      id: 'CHEM1601-BSCI1510',
+      source: 'CHEM1601',
+      target: 'BSCI1510',
+      animated: true,
+      style: { stroke: '#9c27b0' },
+      type: 'smoothstep',
+    };
+
+    return [...courseEdges, chem1601Edge];
   }, [courses]);
 
   const [edgesState, setEdgesState, onEdgesChange] = useEdgesState(edges);
