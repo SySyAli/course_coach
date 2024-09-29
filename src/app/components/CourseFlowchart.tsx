@@ -114,40 +114,45 @@ const CourseFlowchart: React.FC<CourseFlowchartProps> = ({ courses, completedCou
       },
     }));
 
-    // Add CHEM1601 node
-    const chem1601Node: Node = {
-      id: 'CHEM1601',
-      position: { x: -150, y: 100 }, // Adjust position to be to the left of BSCI1510
-      data: { 
-        label: (
-          <>
-            <strong>CHEM1601</strong>
-            <br />
-            General Chemistry
-          </>
-        ),
-        course: {
-          __catalogCourseId: 'CHEM1601',
-          title: 'General Chemistry',
-          prerequisites: [],
-          corequisites: [],
-          description: 'Prerequisite for BSCI1510'
-        }
-      },
-      style: {
-        background: '#f0e6ff',
-        color: '#4a0e4e',
-        border: '1px solid #9c27b0',
-        borderRadius: '8px',
-        padding: '10px',
-        fontSize: '12px',
-        fontWeight: 'bold',
-        textAlign: 'center',
-        width: 180,
-      },
-    };
+    // Only add CHEM1601 node if it's a corequisite for any course
+    const hasChem1601Coreq = courses.some(course => course.corequisites.includes('CHEM1601'));
+    
+    if (hasChem1601Coreq) {
+      const chem1601Node: Node = {
+        id: 'CHEM1601',
+        position: { x: -150, y: 100 },
+        data: { 
+          label: (
+            <>
+              <strong>CHEM1601</strong>
+              <br />
+              General Chemistry
+            </>
+          ),
+          course: {
+            __catalogCourseId: 'CHEM1601',
+            title: 'General Chemistry',
+            prerequisites: [],
+            corequisites: [],
+            description: 'Prerequisite for BSCI1510'
+          }
+        },
+        style: {
+          background: '#f0e6ff',
+          color: '#4a0e4e',
+          border: '1px solid #9c27b0',
+          borderRadius: '8px',
+          padding: '10px',
+          fontSize: '12px',
+          fontWeight: 'bold',
+          textAlign: 'center',
+          width: 180,
+        },
+      };
+      return [...courseNodes, chem1601Node];
+    }
 
-    return [...courseNodes, chem1601Node];
+    return courseNodes;
   }, [courses, completedCourses, getNodeColor]);
 
   const [nodesState, setNodesState, onNodesChange] = useNodesState(nodes);
@@ -172,17 +177,21 @@ const CourseFlowchart: React.FC<CourseFlowchartProps> = ({ courses, completedCou
       })),
     ]);
 
-    // Add edge from CHEM1601 to BSCI1510
-    const chem1601Edge: Edge = {
-      id: 'CHEM1601-BSCI1510',
-      source: 'CHEM1601',
-      target: 'BSCI1510',
-      animated: true,
-      style: { stroke: '#9c27b0' },
-      type: 'custom',
-    };
+    // Only add CHEM1601 edge if it's a corequisite for BSCI1510
+    const bsci1510 = courses.find(course => course.__catalogCourseId === 'BSCI1510');
+    if (bsci1510 && bsci1510.corequisites.includes('CHEM1601')) {
+      const chem1601Edge: Edge = {
+        id: 'CHEM1601-BSCI1510',
+        source: 'CHEM1601',
+        target: 'BSCI1510',
+        animated: true,
+        style: { stroke: '#9c27b0' },
+        type: 'custom',
+      };
+      return [...courseEdges, chem1601Edge];
+    }
 
-    return [...courseEdges, chem1601Edge];
+    return courseEdges;
   }, [courses]);
 
   const [edgesState, setEdgesState, onEdgesChange] = useEdgesState(edges);

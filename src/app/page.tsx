@@ -1,7 +1,7 @@
 'use client'
 
 import React, { useState, useEffect, useCallback, useRef } from 'react'
-import { Box, VStack, Heading, Text, Container, Spinner, Tabs, TabList, TabPanels, Tab, TabPanel, useToast } from '@chakra-ui/react'
+import { Box, VStack, Heading, Text, Container, Spinner, Tabs, TabList, TabPanels, Tab, TabPanel, useToast, Center } from '@chakra-ui/react'
 import MajorSelector from './components/MajorSelector'
 import CourseList from './components/CourseList'
 import CourseFlowchart from './components/CourseFlowchart'
@@ -12,7 +12,7 @@ const Home: React.FC = () => {
   const [loading, setLoading] = useState(false)
   const [completedCourses, setCompletedCourses] = useState<Set<string>>(new Set())
   const toast = useToast()
-  const toastRef = useRef<{ [key: string]: boolean }>({})
+  const toastShownRef = useRef<{ [key: string]: boolean }>({})
 
   useEffect(() => {
     const savedCompletedCourses = localStorage.getItem('completedCourses')
@@ -48,24 +48,23 @@ const Home: React.FC = () => {
         newSet.add(courseId)
       }
 
-      localStorage.setItem('completedCourses', JSON.stringify(Array.from(newSet)))
-
-      // Show toast only if it hasn't been shown for this courseId in this render cycle
-      if (!toastRef.current[courseId]) {
+      // Only show toast if it hasn't been shown for this courseId in this render cycle
+      if (!toastShownRef.current[courseId]) {
         toast({
           title: isCompleted ? "Course marked as incomplete" : "Course marked as complete",
           status: isCompleted ? "info" : "success",
           duration: 2000,
           isClosable: true,
         })
-        toastRef.current[courseId] = true
+        toastShownRef.current[courseId] = true
 
         // Reset the toast ref after a short delay
         setTimeout(() => {
-          toastRef.current[courseId] = false
+          toastShownRef.current[courseId] = false
         }, 100)
       }
 
+      localStorage.setItem('completedCourses', JSON.stringify(Array.from(newSet)))
       return newSet
     })
   }, [toast])
@@ -82,9 +81,9 @@ const Home: React.FC = () => {
           </Text>
         </Box>
 
-        <Box px={4}>
+        <Center px={4}>
           <MajorSelector onMajorChange={setMajor} />
-        </Box>
+        </Center>
 
         {loading ? (
           <Box textAlign="center">
