@@ -17,7 +17,9 @@ const MajorSelector: React.FC<MajorSelectorProps> = ({ onMajorChange }) => {
         onChange={(e) => onMajorChange(e.target.value)}
         placeholder="Select major"
       >
-        <option value="BSCI">Biological Sciences (BSCI)</option>
+          <option value="BSCI">Biological Sciences (BSCI)</option>
+          <option value="CS">Computer Science (CS)</option>
+          <option value="MATH">Mathematics (MATH)</option>
       </Select>
     </Box>
   )

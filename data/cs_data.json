@@ -8,7 +8,9 @@
     "subjectCode": {
         "name": "CS",
         "prerequisites": [],
+      "corequisites": [""],
         "description": "Computer Science",
+
         "id": "60466db602af500027645ad5",
         "linkedGroup": "5f62c44095d3fa002a531857"
     },
@@ -25,7 +27,9 @@
     "subjectCode": {
         "name": "CS",
         "prerequisites": [],
+      "corequisites": [""],
         "description": "Computer Science",
+
         "id": "60466db602af500027645ad5",
         "linkedGroup": "5f62c44095d3fa002a531857"
     },
@@ -42,7 +46,9 @@
     "subjectCode": {
         "name": "CS",
         "prerequisites": [],
+      "corequisites": [""],
         "description": "Computer Science",
+
         "id": "60466db602af500027645ad5",
         "linkedGroup": "5f62c44095d3fa002a531857"
     },
@@ -59,7 +65,9 @@
     "subjectCode": {
         "name": "CS",
         "prerequisites": [],
+      "corequisites": [""],
         "description": "Computer Science",
+
         "id": "60466db602af500027645ad5",
         "linkedGroup": "5f62c44095d3fa002a531857"
     },
@@ -76,7 +84,9 @@
     "subjectCode": {
         "name": "CS",
         "prerequisites": [],
+      "corequisites": [""],
         "description": "Computer Science",
+
         "id": "60466db602af500027645ad5",
         "linkedGroup": "5f62c44095d3fa002a531857"
     },
@@ -93,7 +103,9 @@
     "subjectCode": {
         "name": "CS",
         "prerequisites": ["CS1101"],
+      "corequisites": [""],
         "description": "Computer Science",
+
         "id": "60466db602af500027645ad5",
         "linkedGroup": "5f62c44095d3fa002a531857"
     },
@@ -110,7 +122,9 @@
     "subjectCode": {
         "name": "CS",
         "prerequisites": ["CS1101"],
+      "corequisites": [""],
         "description": "Computer Science",
+
         "id": "60466db602af500027645ad5",
         "linkedGroup": "5f62c44095d3fa002a531857"
     },
@@ -127,7 +141,9 @@
     "subjectCode": {
         "name": "CS",
         "prerequisites": ["CS2201", "CS2212"],
+      "corequisites": [""],
         "description": "Computer Science",
+
         "id": "60466db602af500027645ad5",
         "linkedGroup": "5f62c44095d3fa002a531857"
     },
@@ -144,7 +160,9 @@
     "subjectCode": {
         "name": "CS",
         "prerequisites": ["CS2201"],
+      "corequisites": [""],
         "description": "Computer Science",
+
         "id": "60466db602af500027645ad5",
         "linkedGroup": "5f62c44095d3fa002a531857"
     },
@@ -161,7 +179,9 @@
     "subjectCode": {
         "name": "CS",
         "prerequisites": ["CS2212"],
+      "corequisites": [""],
         "description": "Computer Science",
+
         "id": "60466db602af500027645ad5",
         "linkedGroup": "5f62c44095d3fa002a531857"
     },
@@ -178,7 +198,9 @@
     "subjectCode": {
         "name": "CS",
         "prerequisites": [],
+      "corequisites": [""],
         "description": "Computer Science",
+
         "id": "60466db602af500027645ad5",
         "linkedGroup": "5f62c44095d3fa002a531857"
     },
@@ -195,7 +217,9 @@
     "subjectCode": {
         "name": "CS",
         "prerequisites": ["CS2201"],
+      "corequisites": [""],
         "description": "Computer Science",
+
         "id": "60466db602af500027645ad5",
         "linkedGroup": "5f62c44095d3fa002a531857"
     },
@@ -213,7 +237,9 @@
         "name": "CS",
         "prerequisites": ["CS2201"],
 
+      "corequisites": [""],
         "description": "Computer Science",
+
         "id": "60466db602af500027645ad5",
         "linkedGroup": "5f62c44095d3fa002a531857"
     },
@@ -230,7 +256,9 @@
     "subjectCode": {
         "name": "CS",
         "prerequisites": ["CS2201"],
+      "corequisites": [""],
         "description": "Computer Science",
+
         "id": "60466db602af500027645ad5",
         "linkedGroup": "5f62c44095d3fa002a531857"
     },
@@ -247,7 +275,9 @@
     "subjectCode": {
         "name": "CS",
         "prerequisites": ["CS3274"],
+      "corequisites": [""],
         "description": "Computer Science",
+
         "id": "60466db602af500027645ad5",
         "linkedGroup": "5f62c44095d3fa002a531857"
     },
@@ -264,7 +294,9 @@
     "subjectCode": {
         "name": "CS",
         "prerequisites": ["CS3251"],
+      "corequisites": [""],
         "description": "Computer Science",
+
         "id": "60466db602af500027645ad5",
         "linkedGroup": "5f62c44095d3fa002a531857"
     },
@@ -281,7 +313,9 @@
     "subjectCode": {
         "name": "CS",
         "prerequisites": ["CS3281"],
+      "corequisites": [""],
         "description": "Computer Science",
+
         "id": "60466db602af500027645ad5",
         "linkedGroup": "5f62c44095d3fa002a531857"
     },
@@ -298,7 +332,9 @@
     "subjectCode": {
         "name": "CS",
         "prerequisites": ["CS3251"],
+      "corequisites": [""],
         "description": "Computer Science",
+
         "id": "60466db602af500027645ad5",
         "linkedGroup": "5f62c44095d3fa002a531857"
     },
@@ -315,7 +351,9 @@
     "subjectCode": {
         "name": "CS",
         "prerequisites": ["CS3251"],
+      "corequisites": [""],
         "description": "Computer Science",
+
         "id": "60466db602af500027645ad5",
         "linkedGroup": "5f62c44095d3fa002a531857"
     },
@@ -332,7 +370,9 @@
     "subjectCode": {
         "name": "CS",
         "prerequisites": ["CS3251"],
+      "corequisites": [""],
         "description": "Computer Science",
+
         "id": "60466db602af500027645ad5",
         "linkedGroup": "5f62c44095d3fa002a531857"
     },
@@ -349,7 +389,9 @@
     "subjectCode": {
         "name": "CS",
         "prerequisites": ["CS4260"],
+      "corequisites": [""],
         "description": "Computer Science",
+
         "id": "60466db602af500027645ad5",
         "linkedGroup": "5f62c44095d3fa002a531857"
     },
@@ -366,7 +408,9 @@
     "subjectCode": {
         "name": "CS",
         "prerequisites": ["CS3251"],
+      "corequisites": [""],
         "description": "Computer Science",
+
         "id": "60466db602af500027645ad5",
         "linkedGroup": "5f62c44095d3fa002a531857"
     },
@@ -383,7 +427,9 @@
     "subjectCode": {
         "name": "CS",
         "prerequisites": ["CS3250", "CS3251"], 
+      "corequisites": [""],
         "description": "Computer Science",
+
         "id": "60466db602af500027645ad5",
         "linkedGroup": "5f62c44095d3fa002a531857"
     },
@@ -400,7 +446,9 @@
     "subjectCode": {
         "name": "CS",
         "prerequisites": ["CS3251"],
+      "corequisites": [""],
         "description": "Computer Science",
+
         "id": "60466db602af500027645ad5",
         "linkedGroup": "5f62c44095d3fa002a531857"
     },
@@ -418,7 +466,9 @@
     "subjectCode": {
         "name": "CS",
         "prerequisites": [],
+      "corequisites": [""],
         "description": "Computer Science",
+
         "id": "60466db602af500027645ad5",
         "linkedGroup": "5f62c44095d3fa002a531857"
     },
@@ -435,7 +485,9 @@
     "subjectCode": {
         "name": "CS",
         "prerequisites": ["CS3251"],
+      "corequisites": [""],
         "description": "Computer Science",
+
         "id": "60466db602af500027645ad5",
         "linkedGroup": "5f62c44095d3fa002a531857"
     },
@@ -454,7 +506,9 @@
     "subjectCode": {
         "name": "CS",
         "prerequisites": ["CS3281"],
+      "corequisites": [""],
         "description": "Computer Science",
+
         "id": "60466db602af500027645ad5",
         "linkedGroup": "5f62c44095d3fa002a531857"
     },
@@ -471,7 +525,9 @@
     "subjectCode": {
         "name": "CS",
         "prerequisites": ["CS3251"],
+      "corequisites": [""],
         "description": "Computer Science",
+
         "id": "60466db602af500027645ad5",
         "linkedGroup": "5f62c44095d3fa002a531857"
     },
@@ -488,7 +544,9 @@
     "subjectCode": {
         "name": "CS",
         "prerequisites": ["CS3251"],
+      "corequisites": [""],
         "description": "Computer Science",
+
         "id": "60466db602af500027645ad5",
         "linkedGroup": "5f62c44095d3fa002a531857"
     },

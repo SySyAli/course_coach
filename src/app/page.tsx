@@ -1,7 +1,7 @@
 'use client'
 
 import React, { useState, useEffect, useCallback, useRef } from 'react'
-import { Box, VStack, Heading, Text, Container, Spinner, Tabs, TabList, TabPanels, Tab, TabPanel, useToast } from '@chakra-ui/react'
+import { Box, VStack, Heading, Text, Container, Spinner, Tabs, TabList, TabPanels, Tab, TabPanel, useToast, Flex } from '@chakra-ui/react'
 import MajorSelector from './components/MajorSelector'
 import CourseList from './components/CourseList'
 import CourseFlowchart from './components/CourseFlowchart'
@@ -13,7 +13,7 @@ const Home: React.FC = () => {
   const [loading, setLoading] = useState(false)
   const [completedCourses, setCompletedCourses] = useState<Set<string>>(new Set())
   const toast = useToast()
-  const toastRef = useRef<{ [key: string]: boolean }>({})
+  const toastShownRef = useRef<{ [key: string]: boolean }>({})
 
   useEffect(() => {
     const savedCompletedCourses = localStorage.getItem('completedCourses')
@@ -49,49 +49,52 @@ const Home: React.FC = () => {
         newSet.add(courseId)
       }
 
-      localStorage.setItem('completedCourses', JSON.stringify(Array.from(newSet)))
-
-      // Show toast only if it hasn't been shown for this courseId in this render cycle
-      if (!toastRef.current[courseId]) {
+      // Only show toast if it hasn't been shown for this courseId in this render cycle
+      if (!toastShownRef.current[courseId]) {
         toast({
           title: isCompleted ? "Course marked as incomplete" : "Course marked as complete",
           status: isCompleted ? "info" : "success",
           duration: 2000,
           isClosable: true,
         })
-        toastRef.current[courseId] = true
+        toastShownRef.current[courseId] = true
 
         // Reset the toast ref after a short delay
         setTimeout(() => {
-          toastRef.current[courseId] = false
+          toastShownRef.current[courseId] = false
         }, 100)
       }
 
+      localStorage.setItem('completedCourses', JSON.stringify(Array.from(newSet)))
       return newSet
     })
   }, [toast])
 
   return (
-    <Container maxW="container.xl" py={10}>
-      <VStack spacing={8} align="stretch">
-        <Box textAlign="center">
+    <Container maxW="container.xl" p={0} height="100vh" display="flex" flexDirection="column">
+      <VStack spacing={4} align="stretch" flex={1}>
+        <Box textAlign="center" p={4}>
           <Heading as="h1" size="2xl" mb={2} color="purple.600">
-            Course Explorer
+            CourseCoach
           </Heading>
           <Text fontSize="xl" color="gray.600">
             Discover courses for your major
           </Text>
         </Box>
 
-        <MajorSelector onMajorChange={setMajor} />
+        <Flex direction={{ base: 'column', md: 'row' }} px={4}>
+          <Box width={{ base: '100%', md: '60%' }} mb={{ base: 4, md: 0 }}>
+            <MajorSelector onMajorChange={setMajor} />
+          </Box>
+        </Flex>
 
         {loading ? (
           <Box textAlign="center">
             <Spinner size="xl" color="purple.500" />
           </Box>
         ) : major && courses.length > 0 ? (
-          <Tabs isFitted variant="enclosed">
-            <TabList mb="1em">
+          <Tabs isFitted variant="enclosed" flex={1} display="flex" flexDirection="column">
+            <TabList>
               <Tab>Course List</Tab>
               <Tab>Course Flowchart</Tab>
             </TabList>
@@ -103,14 +106,12 @@ const Home: React.FC = () => {
                   toggleCourseCompletion={toggleCourseCompletion}
                 />
               </TabPanel>
-              <TabPanel>
-                <Box height="700px" width="100%">
-                  <CourseFlowchart 
-                    courses={courses} 
-                    completedCourses={completedCourses}
-                    toggleCourseCompletion={toggleCourseCompletion}
-                  />
-                </Box>
+              <TabPanel height="100%" p={0}>
+                <CourseFlowchart 
+                  courses={courses} 
+                  completedCourses={completedCourses}
+                  toggleCourseCompletion={toggleCourseCompletion}
+                />
               </TabPanel>
             </TabPanels>
           </Tabs>
@@ -122,9 +123,7 @@ const Home: React.FC = () => {
           </Box>
         )}
       </VStack>
-      <div className="fixed bottom-4 right-4">
-        <AIChatbot />
-      </div>
+      <AIChatbot completedCourses={Array.from(completedCourses)} major={major || ''} />
     </Container>
   )
 }
