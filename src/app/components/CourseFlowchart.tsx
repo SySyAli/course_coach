@@ -133,7 +133,7 @@ const CourseFlowchart: React.FC<CourseFlowchartProps> = ({ courses, completedCou
         course: course
       },
       style: {
-        background: completedCourses.has(course.__catalogCourseId) ? '#90EE90' : '#f0e6ff',
+        background: getNodeColor(course),
         color: '#4a0e4e',
         border: '1px solid #9c27b0',
         borderRadius: '8px',
@@ -225,32 +225,34 @@ const CourseFlowchart: React.FC<CourseFlowchartProps> = ({ courses, completedCou
     return courseEdges;
   }, [courses]);
 
-  const [nodesState, setNodesState, onNodesChange] = useNodesState(nodes);
   const [edgesState, setEdgesState, onEdgesChange] = useEdgesState(edges);
 
   const onConnect = useCallback((params: Connection) => setEdgesState((eds) => addEdge(params, eds)), [setEdgesState]);
 
+  const updateNodeColors = useCallback(() => {
+    setNodesState((nds) =>
+      nds.map((n) => ({
+        ...n,
+        style: {
+          ...n.style,
+          background: getNodeColor(n.data.course),
+        },
+      }))
+    );
+  }, [setNodesState, getNodeColor]);
+
   const onNodeClick = useCallback((event: React.MouseEvent, node: Node) => {
     if (event.ctrlKey || event.metaKey) {
       toggleCourseCompletion(node.id);
-      // Update node color immediately
-      setNodesState((nds) =>
-        nds.map((n) =>
-          n.id === node.id
-            ? {
-                ...n,
-                style: {
-                  ...n.style,
-                  background: completedCourses.has(node.id) ? '#f0e6ff' : '#90EE90',
-                },
-              }
-            : n
-        )
-      );
+      updateNodeColors();
     } else {
       setSelectedCourse(node.data.course);
     }
-  }, [toggleCourseCompletion, completedCourses, setNodesState]);
+  }, [toggleCourseCompletion, updateNodeColors]);
+
+  useEffect(() => {
+    updateNodeColors();
+  }, [completedCourses, updateNodeColors]);
 
   const closeModal = () => setSelectedCourse(null);
 
@@ -289,6 +291,7 @@ const CourseFlowchart: React.FC<CourseFlowchartProps> = ({ courses, completedCou
           onEdgesChange={onEdgesChange}
           onConnect={onConnect}
           onNodeClick={onNodeClick}
+          onInit={onInit}
           fitView
           edgeTypes={{ custom: CustomEdge }}
         >
@@ -328,20 +331,7 @@ const CourseFlowchart: React.FC<CourseFlowchartProps> = ({ courses, completedCou
                 onClick={() => {
                   if (selectedCourse) {
                     toggleCourseCompletion(selectedCourse.__catalogCourseId);
-                    // Update node color immediately
-                    setNodesState((nds) =>
-                      nds.map((n) =>
-                        n.id === selectedCourse.__catalogCourseId
-                          ? {
-                              ...n,
-                              style: {
-                                ...n.style,
-                                background: completedCourses.has(selectedCourse.__catalogCourseId) ? '#f0e6ff' : '#90EE90',
-                              },
-                            }
-                          : n
-                      )
-                    );
+                    updateNodeColors();
                   }
                 }}
               >

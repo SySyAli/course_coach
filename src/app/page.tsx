@@ -98,8 +98,8 @@ const Home: React.FC = () => {
               <Tab>Course List</Tab>
               <Tab>Course Flowchart</Tab>
             </TabList>
-            <TabPanels>
-              <TabPanel>
+            <TabPanels flex={1}>
+              <TabPanel height="100%">
                 <CourseList 
                   courses={courses} 
                   completedCourses={completedCourses}
